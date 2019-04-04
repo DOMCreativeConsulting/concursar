@@ -10,5 +10,6 @@ return array(
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef' => $vendorDir . '/composer/autoload_static.php',
     'Conexao' => $baseDir . '/back-end/core/database/Conexao.php',
+    'Query' => $baseDir . '/back-end/core/QueryConfig.php',
     'QueryBuilder' => $baseDir . '/back-end/core/database/QueryBuilder.php',
 );

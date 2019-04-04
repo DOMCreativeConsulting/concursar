@@ -1,9 +1,7 @@
 <?php
 
 include '../../vendor/autoload.php';
-
-$pdo = Conexao::conectar($config['database']);
-$query = new QueryBuilder($pdo);
+include '../core/QueryConfig.php';
 
 $questoes = $query->selectAll('questoes');
 
