@@ -12,4 +12,6 @@ return array(
     'Conexao' => $baseDir . '/back-end/core/database/Conexao.php',
     'Query' => $baseDir . '/back-end/core/QueryConfig.php',
     'QueryBuilder' => $baseDir . '/back-end/core/database/QueryBuilder.php',
+    'Questao' => $baseDir . '/back-end/models/Questao.php',
+    'View' => $baseDir . '/back-end/models/Model.php',
 );
