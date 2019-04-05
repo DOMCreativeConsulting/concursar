@@ -15,18 +15,20 @@
     
     ?>
 
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-        <div class="atributes">
-            <span>Id: <?=$questao->id;?></span>
-            <span>Ano: <?=$questao->ano;?></span>
-            <span>Banca: <?=$questao->banca;?></span>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="atributes">
+                <span>Id: <?=$questao->id;?></span>
+                <span>Ano: <?=$questao->ano;?></span>
+                <span>Banca: <?=$questao->banca;?></span>
+            </div>
+            <div class="questao">
+                <p>Questão: <?=$questao->questao;?></p>
+            </div>
         </div>
-        <div class="questao">
-            <p>Questão: <?=$questao->questao;?></p>
-        </div>
+        <div class="col-md-3"></div>
     </div>
-    <div class="col-md-3"></div>
 
     <?php endforeach; ?>
 
