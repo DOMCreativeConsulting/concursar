@@ -13,5 +13,6 @@ return array(
     'Query' => $baseDir . '/back-end/core/QueryConfig.php',
     'QueryBuilder' => $baseDir . '/back-end/core/database/QueryBuilder.php',
     'Questao' => $baseDir . '/back-end/models/Questao.php',
+    'Router' => $baseDir . '/back-end/Router.php',
     'View' => $baseDir . '/back-end/models/Model.php',
 );

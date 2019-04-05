@@ -10,3 +10,112 @@ html, body {
 .row{
     width:100% !important;
 }
+
+.atributes{
+    padding-bottom:1%;
+    border-bottom:2px solid grey;
+}
+
+.atributes span{
+    font-weight: bold;
+    padding-right: 4%;
+}
+
+.atributes .dado{
+    color:#D5B46A;
+}
+
+.questao p{
+    padding-top:1%;
+    text-align:justify;
+}
+
+.questao-box{
+    padding-top:2%;
+    padding-bottom:2%;
+}
+
+.alternativaCheck:hover {
+    background-color:red;
+  }
+
+
+/* CUSTOM CHECKBOX */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #D5B46A;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+/* END CUSTOM CHECKBOX */
+
+.botaoResponder{
+    padding:7%;
+    background-color:#D5B46A;
+    color:#fff;
+}
+
+.botaoResponder:hover{
+    transition:0.5s;
+    background-color:#ad8b41;
+}
+
+.textoResposta{
+  padding-top:8%;
+  font-size:18px;
+}

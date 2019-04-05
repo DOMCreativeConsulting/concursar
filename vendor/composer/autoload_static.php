@@ -14,6 +14,7 @@ class ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef
         'Query' => __DIR__ . '/../..' . '/back-end/core/QueryConfig.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/back-end/core/database/QueryBuilder.php',
         'Questao' => __DIR__ . '/../..' . '/back-end/models/Questao.php',
+        'Router' => __DIR__ . '/../..' . '/back-end/Router.php',
         'View' => __DIR__ . '/../..' . '/back-end/models/Model.php',
     );
 

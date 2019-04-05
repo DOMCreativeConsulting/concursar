@@ -1,11 +1,10 @@
-<?php include 'partials/head.html'; ?>
 	<body>
 		<div class="row">
 			<div class="wrap-contact100 filtro">
 				<div class="row">
 					<div class="col-md-1"></div>
 					<div class="col-md-10">
-						<form class="contact100-form validate-form">
+						<form class="contact100-form validate-form" method="post">
 
 							<div class="row aqui"><span class="contact100-form-title">Questões de Concurso</span></div>
 							<div class="row">
