@@ -1,4 +1,6 @@
-function corrigir(){
+function corrigir(objeto){
+
+    var id = objeto.id;
 
     var respostaUsuario = document.getElementsByName('resposta');
     var respostaCorreta = document.getElementById('resposta').value;
@@ -12,12 +14,12 @@ function corrigir(){
 
             if(respostaCorreta == correcao){
 
-                document.getElementById('textoResposta').innerHTML = "Você acertou!";
+                $(`#${id} #textoResposta`).html("ACERTOU!");
 
             }else{
 
-                document.getElementById('textoResposta').innerHTML = "Você errou!";
-                document.getElementById(correcao).style.color = "red";
+                $(`#${id} #textoResposta`).html("ERROU!");
+                $(`#${id} #${correcao}`).css("color","red");
 
             }
 
@@ -25,6 +27,6 @@ function corrigir(){
 
     });
 
-    document.getElementById(respostaCorreta).style.color = "green";
+    $(`#${id} #${respostaCorreta}`).css("color","green");
 
 }

@@ -1,25 +1,23 @@
-<?php require 'views/partials/painelHead.html'; ?>
+<?php include 'partials/painelHead.html'; ?>
 <body class="animsition">
     <div class="page-wrapper">
-        <!-- navbar -->
-        <?php require'views/partials/navbar.html'; ?>
+    <?php include 'partials/navbar.html'; ?>
         <div class="page-content--bgf7">
-            <!-- BREADCRUMB-->
             <section class="au-breadcrumb2">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="au-breadcrumb-content">
                                 <div class="au-breadcrumb-left">
-                                    <span class="au-breadcrumb-span">You are here:</span>
+                                    <span class="au-breadcrumb-span">Você está acessando:</span>
                                     <ul class="list-unstyled list-inline au-breadcrumb__list">
                                         <li class="list-inline-item active">
-                                            <a href="#">Home</a>
+                                            <a href="#">Concursar</a>
                                         </li>
                                         <li class="list-inline-item seprate">
                                             <span>/</span>
                                         </li>
-                                        <li class="list-inline-item">Dashboard</li>
+                                        <li class="list-inline-item">Painel</li>
                                     </ul>
                                 </div>
                                 <form class="au-form-icon--sm" action="" method="post">
@@ -33,24 +31,20 @@
                     </div>
                 </div>
             </section>
-            <!-- END BREADCRUMB-->
 
-            <!-- WELCOME-->
             <section class="welcome p-t-10">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="title-4">Welcome back
-                                <span>John!</span>
+                            <h1 class="title-4">Bem Vindo
+                                <span>Usuário!</span>
                             </h1>
                             <hr class="line-seprate">
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- END WELCOME-->
 
-            <!-- STATISTIC-->
             <section class="statistic statistic2">
                 <div class="container">
                     <div class="row">
@@ -93,7 +87,6 @@
                     </div>
                 </div>
             </section>
-            <!-- END STATISTIC-->
 
             <!-- COPYRIGHT-->
             <section class="p-t-60 p-b-20">
@@ -101,42 +94,30 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © 2019 Concursar. Todos os direitos reservados. Feito com ♥ por <a href="https://dom.com.vc/">DOM</a>.</p>
+                                <p>Copyright © 2019 Concursar. Todos os direitos reservados. Desenvolvido com ♥ por <a href="https://dom.com.vc">DOM</a>.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- END COPYRIGHT-->
         </div>
-
     </div>
 
-    <!-- Jquery JS-->
     <script src="public/theme/painel/vendor/jquery-3.2.1.min.js"></script>
-    <!-- Bootstrap JS-->
     <script src="public/theme/painel/vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="public/theme/painel/vendor/bootstrap-4.1/bootstrap.min.js"></script>
-    <!-- Vendor JS       -->
-    <script src="public/theme/painel/vendor/slick/slick.min.js">
-    </script>
+    <script src="public/theme/painel/vendor/slick/slick.min.js"></script>
     <script src="public/theme/painel/vendor/wow/wow.min.js"></script>
     <script src="public/theme/painel/vendor/animsition/animsition.min.js"></script>
-    <script src="public/theme/painel/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-    </script>
+    <script src="public/theme/painel/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <script src="public/theme/painel/vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="public/theme/painel/vendor/counter-up/jquery.counterup.min.js">
-    </script>
+    <script src="public/theme/painel/vendor/counter-up/jquery.counterup.min.js"></script>
     <script src="public/theme/painel/vendor/circle-progress/circle-progress.min.js"></script>
     <script src="public/theme/painel/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
     <script src="public/theme/painel/vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="public/theme/painel/vendor/select2/select2.min.js">
-    </script>
-
-    <!-- Main JS-->
+    <script src="public/theme/painel/vendor/select2/select2.min.js"></script>
     <script src="public/theme/painel/js/main.js"></script>
 
 </body>
 
 </html>
-<!-- end document-->

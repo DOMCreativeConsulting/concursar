@@ -8,7 +8,7 @@
     
     ?>
 
-    <div class="row questao-box">
+    <div class="row questao-box" id="<?=$questao->id?>">
         <input type="hidden" id="resposta" value="<?=$questao->resposta;?>">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <button value="Responder" class="botaoResponder" onclick="corrigir();">Responder</button>
+                        <button id="<?=$questao->id?>" value="Responder" class="botaoResponder" onclick="corrigir(this);">Responder</button>
                     </div>
                     <div class="col-md-2">
                         <p id="textoResposta" class="textoResposta"></p>
