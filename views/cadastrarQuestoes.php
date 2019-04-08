@@ -7,9 +7,11 @@
         <section class="p-t-60 p-b-20">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <textarea placeholder="Questão..." class="form-control"></textarea>
-                        <button type="submit" class="btn">Cadastrar</button>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="banca">
                     </div>
                 </div>
             </div>

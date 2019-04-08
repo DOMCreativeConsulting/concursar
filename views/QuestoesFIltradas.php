@@ -9,12 +9,11 @@
     ?>
 
     <div class="row questao-box" id="<?=$questao->id?>">
-        
+        <input type="hidden" id="resposta" value="<?=$questao->resposta;?>">
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="atributes">
                 <span>Ano: <span class="dado"><?=$questao->ano;?></span></span>
-                <input type="text" id="resposta" value="<?=$questao->resposta;?>">
                 <span>Banca: <span class="dado"><?=$questao->banca;?></span></span>
                 <span>Dificuldade: <span class="dado"><?=$questao->dificuldade;?></span></span>
                 <span>Instituição: <span class="dado"><?=$questao->instituicao;?></span></span>

@@ -3,7 +3,7 @@ function corrigir(objeto){
     var id = objeto.id;
 
     var respostaUsuario = document.getElementsByName('resposta');
-    var respostaCorreta = document.getElementById('resposta').value;
+    var respostaCorreta = $(`#${id} #resposta`).val();
 
     respostaUsuario.forEach((resposta) =>{
 

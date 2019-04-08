@@ -12,6 +12,13 @@ class Questao{
 
     }
 
+    public function filtrar(){
+
+        $query = Query::config();
+        
+
+    }
+
 }
 
 ?>

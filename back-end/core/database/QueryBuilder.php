@@ -18,9 +18,9 @@ class QueryBuilder{
 
     }
 
-    public function selectWhere($table,$id){
+    public function selectWhere($table,$campo,$value){
 
-        $selecionaTodos = $this->pdo->prepare("SELECT * FROM {$table} WHERE `id` = $id");
+        $selecionaTodos = $this->pdo->prepare("SELECT * FROM {$table} WHERE `{$campo}` = $value");
         $selecionaTodos->execute();
         return $selecionaTodos->fetchAll(PDO::FETCH_CLASS);
 
