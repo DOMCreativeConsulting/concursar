@@ -22,8 +22,13 @@ class QueryBuilder{
 
         $query = "select * from {$tabela}";
 
-        if (current($campos) == $campos[0]) {
-            // We are at the first element
+        foreach($campos as $campo){
+
+            if (current($campos) == $campos[0]) {
+
+                $query .= " where $:campo; LIKE '${filtro}'";
+
+            }
         }
 
 
