@@ -2,7 +2,9 @@
 
 include 'vendor/autoload.php';
 
-Questao::filtrar();
+$campos = $_POST;
+
+$resultado = Questao::filtrar($campos);
 
 require 'views/QuestoesFiltradas.php';
 

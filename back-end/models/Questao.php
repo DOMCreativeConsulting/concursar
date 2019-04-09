@@ -12,10 +12,11 @@ class Questao{
 
     }
 
-    public function filtrar(){
+    public static function filtrar($campos){
 
         $query = Query::config();
-        
+        $resultado = $query->selectWhere('questoes',$campos);
+        return $resultado;
 
     }
 

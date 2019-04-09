@@ -2,7 +2,7 @@
 <body>
     <?php 
     
-    require 'views/partials/filtro.php';
+    require 'views/partials/filtro.html';
 
     foreach ($resultado as $questao):
     
