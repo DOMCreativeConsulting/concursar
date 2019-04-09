@@ -22,7 +22,7 @@ class QueryBuilder{
 
         $query = "select * from {$tabela}";
 
-        foreach($campos as $campo){
+        foreach($campos as $campo => $filtro){
 
             if (current($campos) == $campos[0]) {
 
