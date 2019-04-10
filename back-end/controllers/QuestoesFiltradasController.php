@@ -1,11 +1,11 @@
 <?php
 
-include 'vendor/autoload.php';
+    include 'vendor/autoload.php';
 
-$campos = $_POST;
+    $campos = $_POST;
+    $resultado = Questao::filtrar($campos);
+    $disciplina = Filtro::buscar('Disciplina');
 
-$resultado = Questao::filtrar($campos);
-
-require 'views/QuestoesFiltradas.php';
+    require 'views/QuestoesFiltradas.php';
 
 ?>

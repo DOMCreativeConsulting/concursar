@@ -15,7 +15,7 @@ class Questao{
     public static function filtrar($campos){
 
         $query = Query::config();
-        $resultado = $query->selectWhere('questoes',$campos);
+        $resultado = $query->selectWhereFiltro('questoes',$campos);
         return $resultado;
 
     }

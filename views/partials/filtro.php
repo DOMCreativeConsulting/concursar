@@ -11,7 +11,7 @@
 
 								<div class="wrap-input100 validate-input bg1 col-lg-2">
 									<i class="fa fa-search"></i>
-									<input class="input100" type="text" name="palavra_chave" placeholder="Palavra Chave">
+									<input class="input100" type="text" name="tags" placeholder="Palavra Chave">
 								</div>
 
 								<div class="col-lg-2 boxInput100">
@@ -27,8 +27,9 @@
 									<i class="fa fa-book"></i>
 									<select name="disciplina" class="selectInput100">
 										<option value="">Disciplina</option>
-										<option>Matemática</option>
-										<option>História</option>
+										<?php foreach($disciplina as $campo): ?>
+										<option><?=utf8_encode($campo->valor)?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 
@@ -79,7 +80,7 @@
 
 								<div class="col-lg-2 boxInput100">
 									<i class="fa fa-arrow-down"></i>
-									<select name="Nível" class="selectInput100">
+									<select name="nivel" class="selectInput100">
 										<option value="">Nível</option>
 										<option>Médio</option>
 										<option>Superior</option>

@@ -2,7 +2,8 @@
 
 include 'vendor/autoload.php';
 
-$resultado = Questao::buscar();
+$questoes = Questao::buscar();
+$disciplina = Filtro::buscar('Disciplina');
 
 require 'views/index.php';
 
