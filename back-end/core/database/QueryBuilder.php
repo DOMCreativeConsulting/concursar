@@ -20,22 +20,16 @@ class QueryBuilder{
 
     public function selectWhere($tabela, $campos = null){
 
-        $query = "select * from {$tabela}";
+        $query = "select * from {$tabela} where 1 ";
 
-        foreach($campos as $campo => $filtro){
+        foreach($campos as $campo => $valor){
 
-            if (current($campos) == $campos[0]) {
-
-                $query .= " where $:campo; LIKE '${filtro}'";
-
+            if(!empty($valor)){
+            $query .= "AND {$campo} = {$valor} ";
             }
+
         }
-
-
-        //$query .= ($campos) ? " where " . implode(' = ',  $campos) : "";
-
-        var_dump($query);
-        die();
+            
         try {
 
             $resultado = $this->pdo->prepare($query);
