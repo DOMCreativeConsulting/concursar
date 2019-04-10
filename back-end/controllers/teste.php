@@ -2,6 +2,7 @@
 
 include 'vendor/autoload.php';
 
-$disciplinas = Filtro::buscar('Disciplina');
+var_dump($_POST);
+var_dump($_GET);
 
 ?>

@@ -4,9 +4,11 @@ $(document).ready(function(){
 
         e.preventDefault();
 
-        var inputs = $(this).serialize();
+        var data = $(this).serialize();
 
-        $.post("cadastrarFiltros", inputs, function(){
+        alert(data);
+
+        $.post("teste", data, function(){
             $(".disciplinas").load("teste");
         });
 

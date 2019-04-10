@@ -13,7 +13,7 @@
                             <li><?=utf8_encode($disciplina->valor);?></li>
                             <?php endforeach; ?>
                         </ul>
-                        <form id="disciplinas">
+                        <form id="disciplinas" action="teste" method="POST">
                             <label for="disciplina">
                             <input type="text" name="disciplina" class="form-control">
                             <button type="submit" class="btn">Cadastrar</button>
