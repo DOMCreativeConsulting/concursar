@@ -14639,3 +14639,89 @@ section {
 .vue-lists ul, .vue-lists ol {
     padding-left: 30px;
 }
+
+.paddingTop1{
+    padding-top:1%
+}
+.paddingTop2{
+    padding-top:2%
+}
+.paddingTop3{
+    padding-top:3%
+}
+.paddingTop4{
+    padding-top:4%
+}
+.paddingTop7{
+    padding-top:7%
+}
+.paddingTop10{
+    padding-top:10%
+}
+
+.padding2{
+    padding:3.5%;
+}
+
+.filtroUl{
+    list-style: none;
+  }
+  
+  .filtroBox{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    margin:2%;
+    padding:2%;
+    height: 40vh;
+    overflow:hidden;
+    overflow-y: scroll;
+  }
+
+  .botaoCadastrarFiltro{
+      background-color:#D5B46A;
+      padding:2%;
+      color:white;
+  }
+
+  .botaoCadastrarFiltro:hover{
+    transition: 0.5s;
+    background-color: #ad8b41;
+}
+
+  .filtroBoxTitle{
+    text-align:center;
+    color:#666;
+    font-size:17px;
+  }
+
+  .cadastrar{
+      padding-left:2%;
+      padding-right:2%;
+  }
+
+  @media only screen and (max-width:600px){
+    .filtro{
+        padding-top:15%;
+    }  
+  }
+
+.title{
+    color:#D5B46A;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+}
+
+.datalistFiltros{
+    border-radius:5px;
+    border:2px solid #CED4DA;
+}
+
+.datalistFiltros::placeholder{
+    padding-left:5px;
+    font-size:12px;
+}
+
+input, label{
+    display:block;
+}

@@ -52,10 +52,10 @@ class QueryBuilder{
 
     }
 
-    public function insertInto($table, $filtro, $valor){
+    public function insertInto($table, $campoFiltro, $campoValor, $filtro, $valor){
 
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $inserir = $this->pdo->prepare("INSERT INTO `$table` `filtro` VALUES ('$valor')");
+        $inserir = $this->pdo->prepare("INSERT INTO `$table` (`$campoFiltro`, `$campoValor`) VALUES ('$filtro', '$valor')");
         $inserir->execute();
 
     }

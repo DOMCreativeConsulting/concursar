@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
     $("#disciplinas").submit(function(e){
 

@@ -27,8 +27,8 @@
 									<i class="fa fa-book"></i>
 									<select name="disciplina" class="selectInput100">
 										<option value="">Disciplina</option>
-										<?php foreach($disciplina as $campo): ?>
-										<option><?=utf8_encode($campo->valor)?></option>
+										<?php foreach($disciplina as $disciplina): ?>
+										<option><?=utf8_encode($disciplina->valor)?></option>
 										<?php endforeach; ?>
 									</select>
 								</div>
@@ -37,8 +37,9 @@
 									<i class="fa fa-comment"></i>
 									<select name="assunto" class="selectInput100">
 										<option value="">Assunto</option>
-										<option>Equações</option>
-										<option>Ondas</option>
+										<?php foreach($assunto as $assunto): ?>
+										<option><?=utf8_encode($assunto->valor)?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 
@@ -46,8 +47,9 @@
 									<i class="fa fa-table"></i>
 									<select name="banca" class="selectInput100">
 										<option value="">Banca</option>
-										<option>ACAFE</option>
-										<option>ACAPLAM</option>
+										<?php foreach($banca as $banca): ?>
+										<option><?=utf8_encode($banca->valor)?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 
@@ -55,8 +57,9 @@
 									<i class="fa fa-home"></i>
 									<select name="instituição" class="selectInput100">
 										<option value="">Instituição</option>
-										<option>PUC-RS</option>
-										<option>UFRGS</option>
+										<?php foreach($instituicao as $instituicao): ?>
+										<option><?=utf8_encode($instituicao->valor)?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 
@@ -65,7 +68,31 @@
 									<select name="ano" class="selectInput100">
 										<option value="">Ano</option>
 										<option>2019</option>
-										<option value="2015">2015</option>
+										<option>2018</option>
+										<option>2017</option>
+										<option>2016</option>
+										<option>2015</option>
+										<option>2014</option>
+										<option>2013</option>
+										<option>2012</option>
+										<option>2011</option>
+										<option>2010</option>
+										<option>2009</option>
+										<option>2008</option>
+										<option>2007</option>
+										<option>2006</option>
+										<option>2005</option>
+										<option>2004</option>
+										<option>2003</option>
+										<option>2002</option>
+										<option>2001</option>
+										<option>2000</option>
+										<option>1999</option>
+										<option>1998</option>
+										<option>1997</option>
+										<option>1996</option>
+										<option>1995</option>
+										<option>1994</option>
 									</select>
 								</div>
 
@@ -73,8 +100,9 @@
 									<i class="fa fa-user"></i>
 									<select name="cargo" class="selectInput100">
 										<option value="">Cargo</option>
-										<option>Administrador</option>
-										<option>Advogado</option>
+										<?php foreach($cargo as $cargo): ?>
+										<option><?=utf8_encode($cargo->valor)?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 
@@ -82,6 +110,7 @@
 									<i class="fa fa-arrow-down"></i>
 									<select name="nivel" class="selectInput100">
 										<option value="">Nível</option>
+										<option>Fundamental</option>
 										<option>Médio</option>
 										<option>Superior</option>
 									</select>
@@ -91,8 +120,9 @@
 									<i class="fa fa-pencil"></i>
 									<select name="area_formacao" class="selectInput100">
 										<option value="">Área de Formação</option>
-										<option>Administração</option>
-										<option>Ártes</option>
+										<?php foreach($area_formacao as $area_formacao): ?>
+										<option><?=utf8_encode($area_formacao->valor)?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 
@@ -100,8 +130,9 @@
 									<i class="fa fa-briefcase"></i>
 									<select name="area_atuacao" class="selectInput100">
 										<option value="">Área de Atuação</option>
-										<option>Bancário</option>
-										<option>Educação</option>
+										<?php foreach($area_atuacao as $area_atuacao): ?>
+										<option><?=utf8_encode($area_atuacao->valor)?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 
@@ -110,7 +141,9 @@
 									<select name="dificuldade" class="selectInput100">
 										<option value="">Dificuldade</option>
 										<option>Fácil</option>
+										<option>Médio</option>
 										<option>Difícil</option>
+										<option>Muito Difícil</option>
 									</select>
 								</div>
 
