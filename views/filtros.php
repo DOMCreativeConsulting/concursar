@@ -115,6 +115,26 @@
                     </div>
 
                 </div>
+                <div class="row paddingTop7">
+
+                    <div class="col-md-4 filtro">
+                        <h2 class="filtroBoxTitle"><i class="fa fa-briefcase"></i> Área de Atuação</h2>
+                        <div class="filtroBox">
+                            <ul class="filtroUl">
+                                <?php foreach($areas_atuacao as $area_atuacao): ?>
+                                <li><?=utf8_encode($area_atuacao->valor);?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        <form method="POST">
+                            <div class="row paddingTop2 cadastrar">
+                                <input type="text" name="area_atuacao" class="form-control col-sm-8" placeholder="Área de Atuação" required>
+                                <button type="submit" class="botaoCadastrarFiltro col-sm-4">Cadastrar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
 
 
             </div>

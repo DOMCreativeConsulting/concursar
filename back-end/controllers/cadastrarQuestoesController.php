@@ -2,6 +2,10 @@
 
 include 'vendor/autoload.php';
 
+$filtros = Filtro::getPostedItems();
+
+Filtro::cadastrar($filtros);
+
 $disciplinas = Filtro::buscar('Disciplina');
 $assuntos = Filtro::buscar('Assunto');
 $bancas = Filtro::buscar('Banca');

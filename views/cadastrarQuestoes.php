@@ -162,23 +162,27 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
                             <div class="row">
-                                <div class="col-md-6">
-                                    <label for="cargo"><i class="fa fa-check"></i> Área de Atuação</label>
-                                    <input class="datalistFiltros" name="cargo" list="cargo" placeholder="Pesquisar...">
-                                    <datalist id="cargo" class="datalistFiltros">
-                                        <?php foreach($cargos as $cargo): ?>
-                                        <option value="<?=$cargo->valor?>"><?=$cargo->valor?></option>
+                                <div class="col-md-4">
+                                    <label for="Area_Atuacao"><i class="fa fa-check"></i> Área de Atuação</label>
+                                    <input class="datalistFiltros" name="Area_Atuacao" list="Area_Atuacao" placeholder="Pesquisar...">
+                                    <datalist id="Area_Atuacao" class="datalistFiltros">
+                                        <?php foreach($Areas_Atuacao as $Area_Atuacao): ?>
+                                        <option value="<?=$Area_Atuacao->valor?>"><?=$Area_Atuacao->valor?></option>
                                         <?php endforeach; ?>
                                     </datalist>        
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="nivel">Dificuldade</label>
-                                    <input class="datalistFiltros" name="nivel" list="nivel" placeholder="Pesquisar...">
-                                    <datalist id="nivel" class="datalistFiltros">
-                                        <option value="Fundamental">Fundamental</option>
+                                <div class="col-md-4">
+                                    <label for="dificuldade">Dificuldade</label>
+                                    <input class="datalistFiltros" name="dificuldade" list="dificuldade" placeholder="Pesquisar...">
+                                    <datalist id="dificuldade" class="datalistFiltros">
+                                        <option value="Fácil">Fácil</option>
                                         <option value="Médio">Médio</option>
-                                        <option value="Superior">Superior</option>
+                                        <option value="Difícil">Difícil</option>
+                                        <option value="Muito Difícil">Muito Difícil</option>
                                     </datalist>  
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="botaoCadastrarFiltro">Cadastrar</button>
                                 </div>
                             </div>              
                         </div>

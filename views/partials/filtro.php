@@ -27,7 +27,7 @@
 									<i class="fa fa-book"></i>
 									<select name="disciplina" class="selectInput100">
 										<option value="">Disciplina</option>
-										<?php foreach($disciplina as $disciplina): ?>
+										<?php foreach($disciplinas as $disciplina): ?>
 										<option><?=utf8_encode($disciplina->valor)?></option>
 										<?php endforeach; ?>
 									</select>
@@ -37,7 +37,7 @@
 									<i class="fa fa-comment"></i>
 									<select name="assunto" class="selectInput100">
 										<option value="">Assunto</option>
-										<?php foreach($assunto as $assunto): ?>
+										<?php foreach($assuntos as $assunto): ?>
 										<option><?=utf8_encode($assunto->valor)?></option>
 										<?php endforeach; ?>
 									</select>
@@ -47,7 +47,7 @@
 									<i class="fa fa-table"></i>
 									<select name="banca" class="selectInput100">
 										<option value="">Banca</option>
-										<?php foreach($banca as $banca): ?>
+										<?php foreach($bancas as $banca): ?>
 										<option><?=utf8_encode($banca->valor)?></option>
 										<?php endforeach; ?>
 									</select>
@@ -57,7 +57,7 @@
 									<i class="fa fa-home"></i>
 									<select name="instituição" class="selectInput100">
 										<option value="">Instituição</option>
-										<?php foreach($instituicao as $instituicao): ?>
+										<?php foreach($instituicoes as $instituicao): ?>
 										<option><?=utf8_encode($instituicao->valor)?></option>
 										<?php endforeach; ?>
 									</select>
@@ -100,7 +100,7 @@
 									<i class="fa fa-user"></i>
 									<select name="cargo" class="selectInput100">
 										<option value="">Cargo</option>
-										<?php foreach($cargo as $cargo): ?>
+										<?php foreach($cargos as $cargo): ?>
 										<option><?=utf8_encode($cargo->valor)?></option>
 										<?php endforeach; ?>
 									</select>
@@ -120,7 +120,7 @@
 									<i class="fa fa-pencil"></i>
 									<select name="area_formacao" class="selectInput100">
 										<option value="">Área de Formação</option>
-										<?php foreach($area_formacao as $area_formacao): ?>
+										<?php foreach($areas_formacao as $area_formacao): ?>
 										<option><?=utf8_encode($area_formacao->valor)?></option>
 										<?php endforeach; ?>
 									</select>
@@ -130,7 +130,7 @@
 									<i class="fa fa-briefcase"></i>
 									<select name="area_atuacao" class="selectInput100">
 										<option value="">Área de Atuação</option>
-										<?php foreach($area_atuacao as $area_atuacao): ?>
+										<?php foreach($areas_atuacao as $area_atuacao): ?>
 										<option><?=utf8_encode($area_atuacao->valor)?></option>
 										<?php endforeach; ?>
 									</select>
