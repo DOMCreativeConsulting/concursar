@@ -8,7 +8,8 @@ $router->define([
     'concursar/questoesFiltradas' => 'back-end/controllers/QuestoesFiltradasController.php',
     'concursar/cadastrarFiltros' => 'back-end/controllers/cadastrarFiltrosController.php',
     'concursar/cadastrar' => 'back-end/controllers/cadastrarUsuarioController.php',
-    'concursar/login' => 'back-end/controllers/loginController.php'
+    'concursar/login' => 'back-end/controllers/loginController.php',
+    'concursar/logout' => 'back-end/controllers/logoutController.php'
 
 ]);
 

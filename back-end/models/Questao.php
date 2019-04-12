@@ -12,29 +12,34 @@ class Questao{
 
     }
 
-    public static function cadastrar($filtros){
+    public static function cadastrar(){
 
         $query = Query::config();
-        if(isset($filtros['disciplina'])){
-            $query->insertInto('questoes', 'disciplina', 'valor', 'Disciplina', $filtros['disciplina']);
-        }
-        if(isset($filtros['assunto'])){
-            $query->insertInto('questoes', 'filtro', 'valor', 'Assunto', $filtros['assunto']);
-        }
-        if(isset($filtros['banca'])){
-            $query->insertInto('questoes', 'filtro', 'valor', 'Banca', $filtros['banca']);
-        }
-        if(isset($filtros['instituicao'])){
-            $query->insertInto('questoes', 'filtro', 'valor', 'Instituicao', $filtros['instituicao']);
-        }
-        if(isset($filtros['cargo'])){
-            $query->insertInto('questoes', 'filtro', 'valor', 'Cargo', $filtros['cargo']);
-        }
-        if(isset($filtros['area_formacao'])){
-            $query->insertInto('questoes', 'filtro', 'valor', 'Area_Formacao', $filtros['area_formacao']);
-        }
-        if(isset($filtros['area_atuacao'])){
-            $query->insertInto('questoes', 'filtro', 'valor', 'Area_Atuacao', $filtros['area_atuacao']);
+
+        if(isset($_POST['questao'])){
+
+            $dados['questao'] = $_POST['questao'];
+            $dados['a'] = $_POST['a'];
+            $dados['b'] = $_POST['b'];
+            $dados['c'] = $_POST['c'];
+            $dados['d'] = $_POST['d'];
+            $dados['e'] = $_POST['e'];
+            $dados['resposta'] = $_POST['resposta'];
+            $dados['tags'] = $_POST['tags'];
+            $dados['modalidade'] = $_POST['modalidade'];
+            $dados['disciplina'] = $_POST['disciplinas'];
+            $dados['assunto'] = $_POST['assunto'];
+            $dados['banca'] = $_POST['banca'];
+            $dados['instituicao'] = $_POST['instituicao'];
+            $dados['ano'] = $_POST['ano'];
+            $dados['cargo'] = $_POST['cargo'];
+            $dados['nivel'] = $_POST['nivel'];
+            $dados['Area_Formacao'] = $_POST['Area_Formacao'];
+            $dados['Area_Atuacao'] = $_POST['Area_Atuacao'];
+            $dados['dificuldade'] = $_POST['dificuldade'];
+
+            $query->insert('questoes', $dados);
+
         }
 
     }

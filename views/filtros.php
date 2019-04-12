@@ -2,7 +2,7 @@
 <body class="animsition">
     <div class="page-wrapper">
 
-        <?php include 'partials/navbar.html'; ?>
+        <?php include 'partials/navbar.php'; ?>
 
         <section class="p-t-60 p-b-20">
             <div class="container disciplinas">
@@ -13,7 +13,7 @@
                         <div class="filtroBox">
                             <ul class="filtroUl">
                                 <?php foreach($disciplinas as $disciplina): ?>
-                                <li><?=utf8_encode($disciplina->valor);?></li>
+                                <li><?=$disciplina->valor;?></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
@@ -30,7 +30,7 @@
                         <div class="filtroBox">
                             <ul class="filtroUl">
                                 <?php foreach($assuntos as $assunto): ?>
-                                <li><?=utf8_encode($assunto->valor);?></li>
+                                <li><?=$assunto->valor;?></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
@@ -47,7 +47,7 @@
                         <div class="filtroBox">
                             <ul class="filtroUl">
                                 <?php foreach($bancas as $banca): ?>
-                                <li><?=utf8_encode($banca->valor);?></li>
+                                <li><?=$banca->valor;?></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
@@ -68,7 +68,7 @@
                         <div class="filtroBox">
                             <ul class="filtroUl">
                                 <?php foreach($instituicoes as $instituicao): ?>
-                                <li><?=utf8_encode($instituicao->valor);?></li>
+                                <li><?=$instituicao->valor;?></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
@@ -85,7 +85,7 @@
                         <div class="filtroBox">
                             <ul class="filtroUl">
                                 <?php foreach($cargos as $cargo): ?>
-                                <li><?=utf8_encode($cargo->valor);?></li>
+                                <li><?=$cargo->valor;?></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
@@ -102,7 +102,7 @@
                         <div class="filtroBox">
                             <ul class="filtroUl">
                                 <?php foreach($areas_formacao as $formacao): ?>
-                                <li><?=utf8_encode($formacao->valor);?></li>
+                                <li><?=$formacao->valor;?></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
@@ -122,7 +122,7 @@
                         <div class="filtroBox">
                             <ul class="filtroUl">
                                 <?php foreach($areas_atuacao as $area_atuacao): ?>
-                                <li><?=utf8_encode($area_atuacao->valor);?></li>
+                                <li><?=$area_atuacao->valor;?></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>

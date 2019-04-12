@@ -21,6 +21,14 @@ class User{
 
     }
 
+    public static function buscar(){
+
+        $query = Query::config();
+        $resultado = $query->selectAll('users');
+        return $resultado;
+
+    }
+
     public static function login(){
 
         $query = Query::config();
@@ -32,9 +40,16 @@ class User{
 
             $resultado = $query->selectWhere('users',$dados);
 
+            foreach($resultado as $dado){
+                $nome = $dado->nome;
+                $email = $dado->email;
+            }
+
             if(!empty($resultado)){
                 session_start();
                 $_SESSION['logado'] = 1;
+                $_SESSION['user'] = $nome;
+                $_SESSION['email'] = $email;
                 header('Location: painel');
             }else{
                 ?>
@@ -47,6 +62,15 @@ class User{
             return $resultado;
 
         }
+
+    }
+
+    public static function logout(){
+
+        session_start();
+        $_SESSION['logado'] = 0;
+        session_destroy();
+        header('Location: login');
 
     }
 

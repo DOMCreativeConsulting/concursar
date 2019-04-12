@@ -14725,3 +14725,7 @@ section {
 input, label{
     display:block;
 }
+
+.email-user{
+    text-align: center;
+}

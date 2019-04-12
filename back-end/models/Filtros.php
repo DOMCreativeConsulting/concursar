@@ -10,6 +10,12 @@ class Filtro{
         return $resultado;
     }
 
+    public static function buscarTodos(){
+        $query = Query::config();
+        $resultado = $query->selectAll('filtros');
+        return $resultado;
+    }
+
     public static function cadastrar($filtros){
         $query = Query::config();
         if(isset($filtros['disciplina'])){

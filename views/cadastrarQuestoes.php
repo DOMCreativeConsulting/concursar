@@ -2,7 +2,7 @@
 <body class="animsition">
     <div class="page-wrapper">
 
-        <?php include 'partials/navbar.html'; ?>
+        <?php include 'partials/navbar.php'; ?>
 
         <section class="p-t-60 p-b-20">
             <div class="container">
@@ -19,11 +19,59 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-5">
                             <label for="questao">Questão</label>
-                            <textarea name="questao" class="form-control"></textarea>
+                            <textarea name="questao" class="form-control" maxlength="1000"></textarea>
                         </div>
                         <div class="col-md-3">
                             <label for="questao">Tags</label>
-                            <textarea name="tags" class="form-control" placeholder="tags, sobre, questoes, etc."></textarea>
+                            <textarea name="tags" class="form-control" maxlength="300" placeholder="tags, sobre, questoes, etc."></textarea>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="row paddingTop4">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="a"> Alternativa <b>A</b></label>
+                                    <input class="form-control" name="a" type="text" maxlength="200">      
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="b"> Alternativa <b>B</b></label>
+                                    <input class="form-control" name="b" type="text" maxlength="200">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="c"> Alternativa <b>C</b></label>
+                                    <input class="form-control" name="c" type="text" maxlength="200">   
+                                </div>
+                            </div>              
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="row paddingTop4">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="d"> Alternativa <b>D</b></label>
+                                    <input class="form-control" name="d" type="text" maxlength="200">      
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="e"> Alternativa <b>E</b></label>
+                                    <input class="form-control" name="e" type="text" maxlength="200">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="resposta"><i class="fa fa-check"></i> Resposta</label>
+                                    <select name="resposta" class="form-control">
+                                        <option value="a">A</option>
+                                        <option value="b">B</option>
+                                        <option value="c">C</option>
+                                        <option value="d">D</option>
+                                        <option value="e">E</option>
+                                    </select> 
+                                </div>
+                            </div>              
                         </div>
                         <div class="col-md-2"></div>
                     </div>
