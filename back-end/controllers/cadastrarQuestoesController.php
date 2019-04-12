@@ -2,6 +2,8 @@
 
 include 'vendor/autoload.php';
 
+User::check();
+
 $filtros = Filtro::getPostedItems();
 
 Filtro::cadastrar($filtros);

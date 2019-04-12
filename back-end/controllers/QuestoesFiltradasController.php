@@ -2,6 +2,8 @@
 
     include 'vendor/autoload.php';
 
+    User::check();
+
     $campos = $_POST;
     $resultado = Questao::filtrar($campos);
     $disciplina = Filtro::buscar('Disciplina');

@@ -18,7 +18,7 @@ class QueryBuilder{
 
     }
 
-    public function selectWhere($table, $filtro){
+    public function selectFiltro($table, $filtro){
 
         $selecionaTodos = $this->pdo->prepare("SELECT * FROM `{$table}` WHERE `filtro` = '{$filtro}'");
         $selecionaTodos->execute();
@@ -26,9 +26,36 @@ class QueryBuilder{
 
     }
 
+    public function selectWhere($table, $dados){
+
+        $query = "select * from `{$table}` where 1 ";
+
+        foreach($dados as $dado => $valor){
+
+            if(!empty($valor)){
+            $query .= "AND `{$dado}` = '{$valor}' ";
+            }
+
+        }
+            
+        try {
+            
+            $resultado = $this->pdo->prepare(utf8_decode($query));
+            $resultado->execute();
+
+            return $resultado->fetchAll(PDO::FETCH_CLASS);
+
+        } catch (PDOException $exception) {
+
+            die($exception->getMessage());
+
+        }
+
+    }
+
     public function selectWhereFiltro($tabela, $campos = null){
 
-        $query = "select * from {$tabela} where 1 ";
+        $query = "select * from `{$tabela}` where 1 ";
 
         foreach($campos as $campo => $valor){
 
@@ -49,6 +76,19 @@ class QueryBuilder{
             die($exception->getMessage());
 
         }
+
+    }
+
+    public function insert($tabela, $dados){
+
+        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $dados = (array)$dados;
+        $query = sprintf("INSERT INTO %s(%s) values(%s)",
+            $tabela, "`".implode('`, `', array_keys($dados))."`",
+            "'" . implode("', '", $dados)."'");
+
+            $statement = $this->pdo->prepare($query);
+            $statement->execute();
 
     }
 

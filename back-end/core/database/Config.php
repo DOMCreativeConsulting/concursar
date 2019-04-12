@@ -5,9 +5,9 @@ $noar = false;
     if($noar == true){
         return[
             'database' => [
-                'name' => 'domcom_concursar',
-                'username' => 'domcom_concursar',
-                'password' => 'SENHA',
+                'name' => 'concursa_site',
+                'username' => 'concursar',
+                'password' => 'QERYuF9JjON8',
                 'connection' => 'mysql:host=localhost',
                 'options' => []
             ]

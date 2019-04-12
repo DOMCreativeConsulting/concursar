@@ -6,7 +6,7 @@ class Filtro{
 
     public static function buscar($filtro){
         $query = Query::config();
-        $resultado = $query->selectWhere('filtros', $filtro);
+        $resultado = $query->selectFiltro('filtros', $filtro);
         return $resultado;
     }
 
