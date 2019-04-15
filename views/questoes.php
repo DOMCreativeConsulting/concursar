@@ -11,23 +11,23 @@
                     <div class="col-md-8">
                         <ul class="usersBox">
                         <?php
-                        foreach($usuarios as $usuario):
+                        foreach($questoes as $questao):
                         ?>
                         <li>
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <b><?=$usuario->nome;?></b> - <?=$usuario->hierarquia;?>
+                                    <b><?=$questao->id;?></b> - <?=$questao->questao;?>
                                 </div>
                                 <div class="col-lg-4">
                                     <form method="POST" action="deletar">
                                         <input type="hidden" name="page" value="questoes">
-                                        <button type="submit" name="item" value="<?=$usuario->nome;?>" class="botao-deletar" href="#">
+                                        <button type="submit" name="item" value="<?=$questao->id;?>" class="botao-deletar" href="#">
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
                                     <form method="POST">
                                         <input type="hidden" name="page" value="questoes">
-                                        <button type="submit" name="user" value="<?=$usuario->nome;?>" class="botao-editar" href="#">
+                                        <button type="submit" name="item" value="<?=$questao->id;?>" class="botao-editar" href="#">
                                             <i class="fa fa-edit"></i>
                                         </button>
                                     </form>

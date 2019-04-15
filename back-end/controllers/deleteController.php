@@ -4,10 +4,11 @@
 
     User::check('adminOnly');
 
-    $user = $_POST['user'];
+    $item = $_POST['item'];
+    $page = $_POST['page'];
 
-    User::delete($user);
+    User::delete($item);
 
-    header('Location: usuarios');
+    header("Location: $page");
 
 ?>
