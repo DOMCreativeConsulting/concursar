@@ -16,7 +16,14 @@ class User{
             $dados['password'] = $_POST['senha'];
 
             $query->insert('users', $dados);
+            ?>
+            <script>
+            alert("Cadastrado com sucesso!");
+            </script>
+            <?php
 
+            header('Location: login');
+            
         }
 
     }

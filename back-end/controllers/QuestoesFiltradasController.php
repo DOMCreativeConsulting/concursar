@@ -2,17 +2,15 @@
 
     include 'vendor/autoload.php';
 
-    User::check();
-
     $campos = $_POST;
     $resultado = Questao::filtrar($campos);
-    $disciplina = Filtro::buscar('Disciplina');
-    $assunto = Filtro::buscar('Assunto');
-    $banca = Filtro::buscar('Banca');
-    $instituicao = Filtro::buscar('Instituicao');
-    $cargo = Filtro::buscar('Cargo');
-    $area_formacao = Filtro::buscar('Area_Formacao');
-    $area_atuacao = Filtro::buscar('Area_Atuacao');
+    $disciplinas = Filtro::buscar('Disciplina');
+    $assuntos = Filtro::buscar('Assunto');
+    $bancas = Filtro::buscar('Banca');
+    $instituicoes = Filtro::buscar('Instituicao');
+    $cargos = Filtro::buscar('Cargo');
+    $areas_formacao = Filtro::buscar('Area_Formacao');
+    $areas_atuacao = Filtro::buscar('Area_Atuacao');
 
     require 'views/QuestoesFiltradas.php';
 
