@@ -2,7 +2,7 @@
     <div class="section__content section__content--p35">
         <div class="header3-wrap">
             <div class="header__logo">
-                <a href="#">
+                <a href="./">
                     <img src="public/assets/img/concursar_logo.png" width="200px" alt="CONCURSAR" />
                 </a>
             </div>
@@ -17,13 +17,45 @@
                     <li>
                         <a href="cadastrarQuestoes">
                             <i class="fas fa-copy"></i>
-                            <span class="bot-line"></span>Questões</a>
+                            <span class="bot-line"></span>Questões
+                        </a>
                     </li>
                     <li>
                         <a href="cadastrarFiltros">
                             <i class="fas fa-filter"></i>
-                            <span class="bot-line"></span>Filtros</a>
+                            <span class="bot-line"></span>Filtros
+                        </a>
                     </li>
+                    <?php 
+
+                    if($_SESSION['hierarquia'] == 'admin'){
+
+                    ?>
+
+                        <li class="has-sub">
+                            <a href="#">
+                                <i class="fas fa-users"></i>
+                                <span class="bot-line"></span>Gerenciar
+                            </a>
+                            <ul class="header3-sub-list list-unstyled">
+                                <li>
+                                    <a href="usuarios">Usuários</a>
+                                </li>
+                                <li>
+                                    <a href="questoes">Questões</a>
+                                </li>
+                                <li>
+                                    <a href="filtros">Filtros</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    <?php
+
+                    }
+
+                    ?>
+                
                         </ul>
                     </li>
                 </ul>
@@ -32,12 +64,13 @@
                 <div class="account-wrap">
                     <div class="account-item account-item--style2 clearfix js-item-menu">
                         <div class="content">
-                            <a class="js-acc-btn" href="#"><?=$_SESSION['user']?></a>
+                            <a class="js-acc-btn" href="#"><?=$_SESSION['user'];?></a>
                         </div>
                         <div class="account-dropdown js-dropdown">
                             <div class="info clearfix">
                                 <div class="email-user">
-                                    <span class="email"><?=$_SESSION['email']?></span>
+                                    <span class="email"><?=$_SESSION['email'];?></span><br>
+                                    <span class="hierarquia"><?=$_SESSION['hierarquia'];?></span>
                                 </div>
                             </div>
                             <div class="account-dropdown__body">
@@ -68,7 +101,7 @@
     <div class="header-mobile__bar">
         <div class="container-fluid">
             <div class="header-mobile-inner">
-                <a class="logo" href="#">
+                <a class="logo" href="./">
                     <img src="public/assets/img/concursar_logo.png" width="200px"  alt="CONCURSAR" />
                 </a>
                 <button class="hamburger hamburger--slider" type="button">
@@ -105,12 +138,13 @@
         <div class="account-wrap">
             <div class="account-item account-item--style2 clearfix js-item-menu">
                 <div class="content">
-                    <a class="js-acc-btn" href="#"><?=$_SESSION['user']?></a>
+                    <a class="js-acc-btn" href="#"><?=$_SESSION['user'];?></a>
                 </div>
                 <div class="account-dropdown js-dropdown">
                     <div class="info clearfix">
                         <div class="email-user">
-                            <span class="email"><?=$_SESSION['email']?></span>
+                            <span class="email"><?=$_SESSION['email'];?></span><br>
+                            <span class="hierarquia"><?=$_SESSION['hierarquia'];?></span>
                         </div>
                     </div>
                     <div class="account-dropdown__body">

@@ -1,14 +1,9 @@
 html, body {
-    max-width: 100%;
     overflow-x: hidden;
 }
 
 .filtro{
     background-color:#F1F3F5;
-}
-
-.row{
-    width:100% !important;
 }
 
 .atributes{
@@ -39,6 +34,71 @@ html, body {
     background-color:red;
   }
 
+/*HELPERS*/
+
+.mTop1{
+  margin-top:1%;
+}
+.mTop2{
+  margin-top:2%;
+}
+.mTop3{
+  margin-top:3%;
+}
+.mTop4{
+  margin-top:4%;
+}
+.mTop5{
+  margin-top:5%;
+}
+.mTop6{
+  margin-top:6%;
+}
+.mTop7{
+  margin-top:7%;
+}
+.mTop8{
+  margin-top:8%;
+}
+.mTop9{
+  margin-top:9%;
+}
+.mTop10{
+  margin-top:10%;
+}
+
+.pTop1{
+  padding-top:1%;
+}
+.pTop2{
+  padding-top:2%;
+}
+.pTop3{
+  padding-top:3%;
+}
+.pTop4{
+  padding-top:4%;
+}
+.pTop5{
+  padding-top:5%;
+}
+.pTop6{
+  padding-top:6%;
+}
+.pTop7{
+  padding-top:7%;
+}
+.pTop8{
+  padding-top:8%;
+}
+.pTop9{
+  padding-top:9%;
+}
+.pTop10{
+  padding-top:10%;
+}
+
+/*END HELPERS*/
 
 /* CUSTOM CHECKBOX */
 
@@ -105,7 +165,7 @@ html, body {
 /* END CUSTOM CHECKBOX */
 
 .botaoResponder{
-    padding:7%;
+    padding:10px;
     background-color:#D5B46A;
     color:#fff;
 }
@@ -141,3 +201,9 @@ background-color:#F7F7F7;
   float:right;
 }
 
+@media only screen and (max-width:700px){
+  .row{
+    padding-left:4%;
+    padding-right:4%;
+  }
+}

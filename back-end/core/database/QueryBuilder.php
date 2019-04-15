@@ -18,6 +18,19 @@ class QueryBuilder{
 
     }
 
+    public function delete($tabela, $campo, $valor){
+
+        $sql = "DELETE FROM `{$tabela}` WHERE `{$campo}` = '$valor'";
+        try {
+            $statement = $this->pdo->prepare($sql)->execute();
+            return $statement;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+
+        }
+
+    }
+
     public function selectFiltro($table, $filtro){
 
         $selecionaTodos = $this->pdo->prepare("SELECT * FROM `{$table}` WHERE `filtro` = '{$filtro}'");

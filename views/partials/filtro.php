@@ -1,13 +1,21 @@
 	<body>
-		<div class="row">
+		<div class="row filtro">
 			<div class="wrap-contact100 filtro">
-			<p class="login"><a href="login">Login</a></p>
 				<div class="row">
+					<div class="col-md-12">
+						<p class="login">
+							<?php session_start(); if(!isset($_SESSION['logado'])){ ?>
+								<a href="login">Login</a> | <a href="cadastrar">Cadastre-se</a>
+							<?php }else {  ?>
+								<a href="painel">Painel</a> | <a href="logout">Sair</a>
+							<?php } ?>
+						</p>
+					</div>
 					<div class="col-md-1"></div>
 					<div class="col-md-10">
-						<form class="contact100-form validate-form" method="post" action="questoesFiltradas">
+						<form method="post" action="questoesFiltradas">
 
-							<div class="row aqui"><span class="contact100-form-title">Questões de Concurso</span></div>
+							<div class="row"><span class="contact100-form-title center">Questões de Concurso</span></div>
 							<div class="row">
 
 								<div class="wrap-input100 validate-input bg1 col-lg-2">
@@ -151,13 +159,11 @@
 							</div>
 							<div class="row">
 								<div class="col-md-5"></div>
-								<div class="container-contact100-form-btn col-lg-2">
-									<button class="contact100-form-btn">
-										<span>Filtrar <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i></span>
-									</button>
+								<div class="col-md-2 mTop2">
+									<button class="contact100-form-btn"><span>Filtrar <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i></span></button>
 								</div>
+								<div class="col-md-5"></div>
 							</div>
-
 						</form>
 					</div>
 				</div>

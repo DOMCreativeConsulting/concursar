@@ -4,8 +4,22 @@
     
     require 'views/partials/filtro.php';
 
-    foreach ($questoes as $questao):
-    
+    if(isset($_POST['maxItens'])){
+
+        $maxItens = $maxItens + $_POST['maxItens'];
+
+    }else{
+        $maxItens = 30;
+    }
+
+    $quantidade = 0;
+
+    foreach ($questoes as $questao){
+
+        $quantidade++;
+
+        if($quantidade <= $maxItens){
+
     ?>
 
     <div class="row questao-box" id="<?=$questao->id?>">
@@ -64,7 +78,9 @@
         <div class="col-md-3"></div>
     </div>
 
-    <?php endforeach; ?>
+    <?php }
+    } ?>
+
     <script src="public/assets/js/resposta.js"></script>
 
 </body>

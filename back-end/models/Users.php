@@ -28,6 +28,13 @@ class User{
 
     }
 
+    public static function delete($usuario){
+
+        $query = Query::config();
+        $query->delete('users', 'nome', $usuario);
+
+    }
+
     public static function buscar(){
 
         $query = Query::config();
@@ -50,6 +57,7 @@ class User{
             foreach($resultado as $dado){
                 $nome = $dado->nome;
                 $email = $dado->email;
+                $hierarquia = $dado->hierarquia;
             }
 
             if(!empty($resultado)){
@@ -57,6 +65,7 @@ class User{
                 $_SESSION['logado'] = 1;
                 $_SESSION['user'] = $nome;
                 $_SESSION['email'] = $email;
+                $_SESSION['hierarquia'] = $hierarquia;
                 header('Location: painel');
             }else{
                 ?>
@@ -81,17 +90,30 @@ class User{
 
     }
 
-    public static function check(){
+    public static function check($status = null){
 
         session_start();
 
         if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== 1){
 
-            echo 'você deve estar <a href="login">logado</a> para acessar o painel';
+            echo '<div class="aviso">Você deve estar <a href="login">logado</a> para acessar o painel</div>';
             die();
             session_destroy();
             exit;
             
+        } 
+
+        if($status == 'adminOnly'){
+
+            if($_SESSION['hierarquia'] != 'admin'){
+
+                echo '<div class="aviso">Você não tem permissao para acessar esta área!</div>';
+                die();
+                session_destroy();
+                exit;
+
+            }
+
         } 
 
     }

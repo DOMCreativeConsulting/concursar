@@ -9,7 +9,11 @@ $router->define([
     'concursar/cadastrarFiltros' => 'back-end/controllers/cadastrarFiltrosController.php',
     'concursar/cadastrar' => 'back-end/controllers/cadastrarUsuarioController.php',
     'concursar/login' => 'back-end/controllers/loginController.php',
-    'concursar/logout' => 'back-end/controllers/logoutController.php'
+    'concursar/logout' => 'back-end/controllers/logoutController.php',
+    'concursar/usuarios' => 'back-end/controllers/usersController.php',
+    'concursar/questoes' => 'back-end/controllers/questoesController.php',
+    'concursar/filtros' => 'back-end/controllers/filtrosController.php',
+    'concursar/deletar' => 'back-end/controllers/deleteController.php'
 
 ]);
 

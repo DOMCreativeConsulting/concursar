@@ -14729,3 +14729,43 @@ input, label{
 .email-user{
     text-align: center;
 }
+
+.usersBox{
+    margin-top:5%;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    border-radius:5px;
+    list-style:none;
+}
+
+.usersBox li{
+    padding:1%;
+    border-radius:5px;
+}
+
+.usersBox li:nth-child(even) {
+    background-color:#f1f3f5;
+}
+
+.usersBox li button{
+    right:0px;
+    float:right;
+    margin-left:10px;
+}
+
+.botao-deletar{
+    color:red;
+}
+
+.botao-deletar:hover{
+    color:#BF0000;
+}
+
+.botao-editar{
+    color:yellowgreen;
+}
+
+.botao-editar:hover{
+    color:green;
+}
