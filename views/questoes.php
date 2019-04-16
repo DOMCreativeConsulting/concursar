@@ -15,21 +15,29 @@
                         ?>
                         <li>
                             <div class="row">
-                                <div class="col-lg-8">
-                                    <b><?=$questao->id;?></b> - <?=$questao->questao;?>
+                                <div class="col-lg-7">
+                                    <p style="text-align:justify;font-size:11px;"><?=$questao->questao;?></p> - Resposta: <b><?=$questao->resposta;?></b>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-5">
                                     <form method="POST" action="deletar">
-                                        <input type="hidden" name="page" value="questoes">
-                                        <button type="submit" name="item" value="<?=$questao->id;?>" class="botao-deletar" href="#">
+                                        <button type="submit" name="questao" value="<?=$questao->id;?>" class="botao-deletar" href="#">
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
-                                    <form method="POST">
-                                        <input type="hidden" name="page" value="questoes">
-                                        <button type="submit" name="item" value="<?=$questao->id;?>" class="botao-editar" href="#">
+                                        <button type="submit" name="questao" id="<?=$questao->id;?>" onclick="rename(this);" value="<?=$questao->id;?>" class="botao-editar" href="#">
                                             <i class="fa fa-edit"></i>
                                         </button>
+                                    <form method="POST" action="rename">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <textarea type="text" class="inputQuestao <?=$questao->id;?>" id="<?=$questao->id;?>" value="<?=$questao->questao;?>" name="questaoValue" placeholder="novo valor..." required></textarea>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button style="float:right;" type="submit" id="<?=$questao->id;?>" name="questao" value="<?=$questao->id;?>" class="botaoQuestao <?=$questao->id;?>" href="#">
+                                                    Salvar
+                                                </button>
+                                            </div>                                                                                                                                   
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -71,6 +79,7 @@
     <script src="public/theme/painel/vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="public/theme/painel/vendor/select2/select2.min.js"></script>
     <script src="public/theme/painel/js/main.js"></script>
+    <script src="public/assets/js/questoes.js"></script>
 
 </body>
 

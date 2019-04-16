@@ -13,7 +13,8 @@ $router->define([
     'concursar/usuarios' => 'back-end/controllers/usersController.php',
     'concursar/questoes' => 'back-end/controllers/questoesController.php',
     'concursar/filtros' => 'back-end/controllers/filtrosController.php',
-    'concursar/deletar' => 'back-end/controllers/deleteController.php'
+    'concursar/deletar' => 'back-end/controllers/deleteController.php',
+    'concursar/rename' => 'back-end/controllers/renameController.php'
 
 ]);
 

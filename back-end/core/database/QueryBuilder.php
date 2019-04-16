@@ -18,6 +18,22 @@ class QueryBuilder{
 
     }
 
+    public function update($tabela, $campo, $valor, $whereCampo, $whereValor){
+        
+        $sql = sprintf(
+            "UPDATE `%s` \n SET `%s` = '%s' \n WHERE `%s` = %s",
+            $tabela,
+            $campo,
+            $valor,
+            $whereCampo,
+            $whereValor
+        );
+
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute();
+
+    }
+
     public function delete($tabela, $campo, $valor){
 
         $sql = "DELETE FROM `{$tabela}` WHERE `{$campo}` = '$valor'";

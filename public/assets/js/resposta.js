@@ -14,11 +14,11 @@ function corrigir(objeto){
 
             if(respostaCorreta == correcao){
 
-                $(`#${id} #textoResposta`).html("ACERTOU!");
+                $(`#${id} #textoResposta`).html("Você Acertou!");
 
             }else{
 
-                $(`#${id} #textoResposta`).html("ERROU!");
+                $(`#${id} #textoResposta`).html("Você Errou!");
                 $(`#${id} #${correcao}`).css("color","red");
 
             }
@@ -27,6 +27,13 @@ function corrigir(objeto){
 
     });
 
-    $(`#${id} #${respostaCorreta}`).css("color","green");
+    $(`#${id} #${respostaCorreta}`).css("color","yellowgreen");
+
+}
+
+function logar(){
+
+    alert("Você precisar estar logado para responder!");
+    window.location.replace("login");
 
 }

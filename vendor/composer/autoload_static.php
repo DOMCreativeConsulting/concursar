@@ -12,6 +12,7 @@ class ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef
         'Composer\\Autoload\\ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Conexao' => __DIR__ . '/../..' . '/back-end/core/database/Conexao.php',
         'Filtro' => __DIR__ . '/../..' . '/back-end/models/Filtros.php',
+        'Item' => __DIR__ . '/../..' . '/back-end/models/Model.php',
         'Query' => __DIR__ . '/../..' . '/back-end/core/QueryConfig.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/back-end/core/database/QueryBuilder.php',
         'Questao' => __DIR__ . '/../..' . '/back-end/models/Questao.php',

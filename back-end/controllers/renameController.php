@@ -4,6 +4,6 @@
 
     User::check('adminOnly');
 
-    Item::delete();
+    Item::rename();
 
 ?>

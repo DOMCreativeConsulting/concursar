@@ -181,12 +181,34 @@ html, body {
 }
 
 .selectInput100{
-background-color:#F7F7F7;
+  background-color:#F7F7F7;
   outline: none;
   font-size: 12px;
   height:38px;
   width:80%;
   border:none;
+  -moz-appearance: none;
+}
+
+.boxInput100:hover{
+  transition:0.1s;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(150,150,150,1);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(150,150,150,1);
+  box-shadow: 0px 0px 7px 0px rgba(150,150,150,1);
+  border-color:#ad8b41;
+}
+
+@-moz-document url-prefix() {
+  .selectInput100{
+    background-image: url('../img/arrow.png');
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+
+.selectInput100:-moz-focusring{
+  color: transparent;
+  text-shadow: 0 0 0 #000;
 }
 
 .boxInput100{
@@ -206,4 +228,37 @@ background-color:#F7F7F7;
     padding-left:4%;
     padding-right:4%;
   }
+}
+
+.login a{
+  font-family: "sans-serif";
+}
+
+.login a:hover{
+  color:#ad8b41;
+}
+
+.questao-box{
+  -webkit-animation: fadein 2s;
+  -moz-animation: fadein 2s; 
+  -ms-animation: fadein 2s; 
+  -o-animation: fadein 2s; 
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

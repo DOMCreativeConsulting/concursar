@@ -14769,3 +14769,76 @@ input, label{
 .botao-editar:hover{
     color:green;
 }
+
+.inputFiltro{
+    width: 100%;
+    border:1px solid #ad8b41;
+    padding:3px;
+    border-radius: 3px;
+
+}
+
+.botaoFiltro{
+    background-color:#ad8b41;
+    color:white;
+    padding:3px;
+    border-radius: 3px;
+}
+
+.botaoFiltro:hover{
+    transition:0.3s;
+    background-color:#856624;
+}
+
+
+.botaoQuestao{
+    background-color:#ad8b41;
+    color:white;
+    padding:3px;
+    border-radius: 3px;
+}
+
+.botaoQuestao:hover{
+    transition:0.3s;
+    background-color:#856624;
+}
+
+.inputQuestao{
+    width: 100%;
+    border:1px solid #ad8b41;
+    padding:3px;
+    border-radius: 3px;
+
+}
+
+.botaoUser{
+    background-color:#ad8b41;
+    color:white;
+    padding:3px;
+    border-radius: 3px;
+}
+
+.botaoUser:hover{
+    transition:0.3s;
+    background-color:#856624;
+}
+
+.inputUser{
+    width: 100%;
+    border:1px solid #ad8b41;
+    padding:3px;
+    border-radius: 3px;
+
+}
+
+.botaoHierarquia{
+    background-color:#ad8b41;
+    color:white;
+    padding:3px;
+    border-radius: 3px;
+}
+
+.botaoHierarquia:hover{
+    transition:0.3s;
+    background-color:#856624;
+}

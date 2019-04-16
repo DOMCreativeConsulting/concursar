@@ -115,7 +115,7 @@
     <nav class="navbar-mobile">
         <div class="container-fluid">
             <ul class="navbar-mobile__list list-unstyled">
-                <li class="has-sub">
+                <li>
                     <a class="js-arrow" href="#">
                         <i class="fas fa-tachometer-alt"></i>Painel</a>
                 </li>
@@ -127,6 +127,29 @@
                     <a href="cadastrarFiltros">
                         <i class="fas fa-filter"></i>Filtros</a>
                 </li>
+                <?php 
+                if($_SESSION['hierarquia'] == 'admin'){
+                ?>
+                    <li class="has-sub">
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            <span class="bot-line"></span>Gerenciar
+                        </a>
+                        <ul class="header3-sub-list list-unstyled">
+                            <li>
+                                <a href="usuarios">Usuários</a>
+                            </li>
+                            <li>
+                                <a href="questoes">Questões</a>
+                            </li>
+                            <li>
+                                <a href="filtros">Filtros</a>
+                            </li>
+                        </ul>
+                    </li>
+                <?php
+                }
+                ?>
                     </ul>
                 </li>
             </ul>

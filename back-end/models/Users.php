@@ -28,13 +28,6 @@ class User{
 
     }
 
-    public static function delete($usuario){
-
-        $query = Query::config();
-        $query->delete('users', 'nome', $usuario);
-
-    }
-
     public static function buscar(){
 
         $query = Query::config();
@@ -66,7 +59,7 @@ class User{
                 $_SESSION['user'] = $nome;
                 $_SESSION['email'] = $email;
                 $_SESSION['hierarquia'] = $hierarquia;
-                header('Location: painel');
+                header('Location: ./');
             }else{
                 ?>
                 <script>

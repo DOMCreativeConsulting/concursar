@@ -1,17 +1,13 @@
-/*$(document).ready(function(){
+$(document).ready(function(){
 
-    $("#disciplinas").submit(function(e){
-
-        e.preventDefault();
-
-        var data = $(this).serialize();
-
-        alert(data);
-
-        $.post("teste", data, function(){
-            $(".disciplinas").load("teste");
-        });
-
-    });
+    $('.inputFiltro').hide();
+    $('.botaoFiltro').hide();
 
 });
+
+function rename(){
+
+    $('.botaoFiltro').toggle(300);
+    $('.inputFiltro').toggle(300);
+
+}

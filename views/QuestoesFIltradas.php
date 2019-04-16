@@ -53,7 +53,13 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <button id="<?=$questao->id?>" value="Responder" class="botaoResponder" onclick="corrigir(this);">Responder</button>
+                        <?php
+                        if(isset($_SESSION['logado']) == 1){?>
+                            <button id="<?=$questao->id?>" value="Responder" class="botaoResponder" onclick="corrigir(this);">Responder</button>
+                        <?php
+                        }else{?>
+                            <button id="<?=$questao->id?>" value="Responder" class="botaoResponder" onclick="logar();">Responder</button>
+                        <?php } ?>
                     </div>
                     <div class="col-md-2">
                         <p id="textoResposta" class="textoResposta"></p>

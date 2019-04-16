@@ -5,9 +5,9 @@
 					<div class="col-md-12">
 						<p class="login">
 							<?php session_start(); if(!isset($_SESSION['logado'])){ ?>
-								<a href="login">Login</a> | <a href="cadastrar">Cadastre-se</a>
+								<p class="login"><a href="login">Login</a> | <a href="cadastrar">Cadastre-se</a></p>
 							<?php }else {  ?>
-								<a href="painel">Painel</a> | <a href="logout">Sair</a>
+								<p class="login"><a href="painel">Painel</a> | <a href="logout">Sair</a></p>
 							<?php } ?>
 						</p>
 					</div>
@@ -37,7 +37,7 @@
 									<select name="disciplina" class="selectInput100">
 										<option value="">Disciplina</option>
 										<?php foreach($disciplinas as $disciplina): ?>
-										<option><?=utf8_encode($disciplina->valor)?></option>
+										<option><?=$disciplina->valor?></option>
 										<?php endforeach; ?>
 									</select>
 								</div>
@@ -47,7 +47,7 @@
 									<select name="assunto" class="selectInput100">
 										<option value="">Assunto</option>
 										<?php foreach($assuntos as $assunto): ?>
-										<option><?=utf8_encode($assunto->valor)?></option>
+										<option><?=$assunto->valor?></option>
 										<?php endforeach; ?>
 									</select>
 								</div>
@@ -57,7 +57,7 @@
 									<select name="banca" class="selectInput100">
 										<option value="">Banca</option>
 										<?php foreach($bancas as $banca): ?>
-										<option><?=utf8_encode($banca->valor)?></option>
+										<option><?=$banca->valor?></option>
 										<?php endforeach; ?>
 									</select>
 								</div>
@@ -67,7 +67,7 @@
 									<select name="instituição" class="selectInput100">
 										<option value="">Instituição</option>
 										<?php foreach($instituicoes as $instituicao): ?>
-										<option><?=utf8_encode($instituicao->valor)?></option>
+										<option><?=$instituicao->valor?></option>
 										<?php endforeach; ?>
 									</select>
 								</div>
@@ -110,7 +110,7 @@
 									<select name="cargo" class="selectInput100">
 										<option value="">Cargo</option>
 										<?php foreach($cargos as $cargo): ?>
-										<option><?=utf8_encode($cargo->valor)?></option>
+										<option><?=$cargo->valor?></option>
 										<?php endforeach; ?>
 									</select>
 								</div>
@@ -130,7 +130,7 @@
 									<select name="area_formacao" class="selectInput100">
 										<option value="">Área de Formação</option>
 										<?php foreach($areas_formacao as $area_formacao): ?>
-										<option><?=utf8_encode($area_formacao->valor)?></option>
+										<option><?=$area_formacao->valor?></option>
 										<?php endforeach; ?>
 									</select>
 								</div>
@@ -140,7 +140,7 @@
 									<select name="area_atuacao" class="selectInput100">
 										<option value="">Área de Atuação</option>
 										<?php foreach($areas_atuacao as $area_atuacao): ?>
-										<option><?=utf8_encode($area_atuacao->valor)?></option>
+										<option><?=$area_atuacao->valor?></option>
 										<?php endforeach; ?>
 									</select>
 								</div>

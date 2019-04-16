@@ -11,57 +11,34 @@
                     <div class="col-md-8">
                         <ul class="usersBox">
                         <?php
-                        foreach($usuarios as $user):
+                        foreach($filtros as $filtro):
                         ?>
                         <li>
                             <div class="row">
                                 <div class="col-lg-7">
-                                    <b><?=$user->nome;?></b> - <?=$user->hierarquia;?>
+                                    <b><?=$filtro->valor;?></b> - <?=$filtro->filtro;?>
                                 </div>
                                 <div class="col-lg-5">
                                     <form method="POST" action="deletar">
-                                        <button type="submit" name="user" value="<?=$user->id;?>" class="botao-deletar" href="#">
+                                        <button type="submit" name="filtro" value="<?=$filtro->id;?>" class="botao-deletar" href="#">
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
-                                        <button type="submit" name="user" id="<?=$user->id;?>" onclick="showSub();" value="<?=$user->id;?>" class="botao-editar" href="#">
+                                        <button type="submit" name="filtro" id="<?=$filtro->id;?>" onclick="rename(this);" value="<?=$filtro->id;?>" class="botao-editar" href="#">
                                             <i class="fa fa-edit"></i>
                                         </button>
-                                        <div class="subMenu">
-                                            <ul style="list-style:none;">
-                                                <li><a onclick="rename();" href="#">Renomear</a></li>
-                                                <li><a onclick="hierarquia();" href="#">Alterar hierarquia</a></li>
-                                            </ul>
-                                        </div>
                                     <form method="POST" action="rename">
                                         <div class="row">
                                             <div class="col-md-8">
-                                                <input type="text" class="inputUser <?=$user->id;?>" id="<?=$user->id;?>" value="<?=$user->nome;?>" name="userValue" placeholder="novo valor..." required>
+                                                <input type="text" class="inputFiltro <?=$filtro->id;?>" id="<?=$filtro->id;?>" value="<?=$filtro->valor;?>" name="filtroValue" placeholder="novo valor..." required>
                                             </div>
                                             <div class="col-md-4">
-                                                <button style="float:right;" type="submit" id="<?=$user->id;?>" name="user" value="<?=$user->id;?>" class="botaoUser <?=$user->id;?>" href="#">
+                                                <button style="float:right;" type="submit" id="<?=$filtro->id;?>" name="filtro" value="<?=$filtro->id;?>" class="botaoFiltro <?=$filtro->id;?>" href="#">
                                                     Salvar
                                                 </button>
                                             </div>                                                                                                                                   
                                         </div>
                                     </form>
-
-                                    <form method="POST" action="rename">
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <select class="hierarquia" name="hierarquia">
-                                                    <option value="admin">Admin</option>
-                                                    <option value="member">Membro</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <button style="float:right;" type="submit" id="<?=$user->id;?>" name="user" value="<?=$user->id;?>" class="botaoHierarquia" href="#">
-                                                    Atualizar
-                                                </button>
-                                            </div>                                                                                                                                   
-                                        </div>
-                                    </form>
-
                                 </div>
                             </div>
                         </li>
@@ -102,7 +79,7 @@
     <script src="public/theme/painel/vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="public/theme/painel/vendor/select2/select2.min.js"></script>
     <script src="public/theme/painel/js/main.js"></script>
-    <script src="public/assets/js/usuarios.js"></script>
+    <script src="public/assets/js/filtros.js"></script>
 
 </body>
 
