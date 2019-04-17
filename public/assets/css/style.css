@@ -262,3 +262,123 @@ html, body {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+.item{
+  float:left;
+  position:relative;
+  display:block;
+  padding: 0px 15px 0px 15px;
+}
+
+.selecionado a{
+  color:#ad8b41 !important;
+}
+
+.item a{
+  font-family: Poppins;
+  text-decoration: none;
+  color:#000;
+  font-size:20px;
+}
+
+.item a:hover{
+  color:#ad8b41;
+}
+
+.logo{
+  margin-right: 50px;
+}
+
+.facebookIcon{
+  background-color:#3b5998;
+  color:white;
+  font-size: 25px;
+  text-align: center;
+  padding-left:18px;
+  padding-right:14px;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius:10%;
+  margin-left: 50px;
+}
+
+.facebookIcon:hover{
+  background-color:#48649F;
+}
+
+.facebookIcon i{
+  color:white !important;
+}
+
+.instagramIcon{
+  background-color:#111;
+  color:white;
+  font-size: 25px;
+  text-align: center;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius:10%;
+  margin-left: 5px;
+}
+
+.instagramIcon:hover{
+  background-color:#333;
+}
+
+.instagramIcon i{
+  color:white !important;
+}
+
+.login{
+  margin:1%;
+  margin-left: -3% !important;
+
+}
+
+.login a{
+  font-family: "Arial" !important;
+}
+
+@media only screen and (min-width:990px){
+  .mobile-navbar{
+    display:none;
+  }
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #ad8b41;
+  color: white;
+}

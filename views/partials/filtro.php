@@ -2,15 +2,6 @@
 		<div class="row filtro">
 			<div class="wrap-contact100 filtro">
 				<div class="row">
-					<div class="col-md-12">
-						<p class="login">
-							<?php session_start(); if(!isset($_SESSION['logado'])){ ?>
-								<p class="login"><a href="login">Login</a> | <a href="cadastrar">Cadastre-se</a></p>
-							<?php }else {  ?>
-								<p class="login"><a href="painel">Painel</a> | <a href="logout">Sair</a></p>
-							<?php } ?>
-						</p>
-					</div>
 					<div class="col-md-1"></div>
 					<div class="col-md-10">
 						<form method="post" action="questoesFiltradas">
