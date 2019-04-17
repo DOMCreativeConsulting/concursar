@@ -15,16 +15,36 @@
                         </a>
                     </li>
                     <li>
+                    <?php 
+
+                    if($_SESSION['hierarquia'] == 'admin'){
+
+                    ?>
                         <a href="cadastrarQuestoes">
                             <i class="fas fa-copy"></i>
                             <span class="bot-line"></span>Questões
                         </a>
+                    <?php
+
+                    }
+
+                    ?>
                     </li>
                     <li>
+                    <?php 
+
+                    if($_SESSION['hierarquia'] == 'admin'){
+
+                    ?>
                         <a href="cadastrarFiltros">
                             <i class="fas fa-filter"></i>
                             <span class="bot-line"></span>Filtros
                         </a>
+                    <?php
+
+                    }
+
+                    ?>
                     </li>
                     <?php 
 
@@ -120,12 +140,24 @@
                         <i class="fas fa-tachometer-alt"></i>Painel</a>
                 </li>
                 <li>
+                <?php 
+                if($_SESSION['hierarquia'] == 'admin'){
+                ?>
                     <a href="cadastrarQuestoes">
                         <i class="fas fa-copy"></i>Questoes</a>
+                <?php
+                }
+                ?>
                 </li>
                 <li>
+                <?php 
+                if($_SESSION['hierarquia'] == 'admin'){
+                ?>
                     <a href="cadastrarFiltros">
                         <i class="fas fa-filter"></i>Filtros</a>
+                <?php
+                }
+                ?>
                 </li>
                 <?php 
                 if($_SESSION['hierarquia'] == 'admin'){

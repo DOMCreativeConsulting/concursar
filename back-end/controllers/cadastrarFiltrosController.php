@@ -2,7 +2,7 @@
 
     include 'vendor/autoload.php';
 
-    User::check();
+    User::check('adminOnly');
 
     $filtros = Filtro::getPostedItems();
 

@@ -41,6 +41,12 @@
     <a href="http://concursarcoaching.com.br/questoes">Questões</a>
     <a href="http://concursarcoaching.com.br/blog">Blog</a>
     <a href="http://concursarcoaching.com.br/contato">Contato</a>
+            <?php @session_start(); if(!isset($_SESSION['logado'])){ ?>
+                <p class=""><a href="login"><i class="fa fa-lock"></i> Login</a>
+                <a href="cadastrar"><i class="fa fa-user-plus"></i> Cadastre-se</a></p>
+            <?php }else {  ?>
+                <p class=""><a href="painel">Painel</a> | <a href="logout">Sair</a></p>
+            <?php } ?>
 </div>
     <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
         <i class="fa fa-bars"></i>

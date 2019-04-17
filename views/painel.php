@@ -41,12 +41,19 @@
                             <h1 class="title-4 paddingTop2">Bem Vindo
                                 <span><?=$_SESSION['user']?></span>
                             </h1>
+                            <h1 class="title-3 paddingTop2">Email:
+                                <span><?=$_SESSION['email']?></span>
+                            </h1>
+                            <h1 class="title-3 paddingTop2">Tipo de conta:
+                                <span><?=$_SESSION['hierarquia']?></span>
+                            </h1>
                         </div>
                     </div>
                 </div>
             </section>
 
             <?php
+            if($_SESSION['hierarquia'] == 'admin'){
             $nQuestoes = 0;
             foreach($questoes as $questao){
                 $nQuestoes++;
@@ -96,6 +103,8 @@
                     </div>
                 </div>
             </section>
+
+            <?php } ?>
 
             <!-- COPYRIGHT-->
             <section class="p-t-60 p-b-20">
