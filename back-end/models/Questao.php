@@ -7,7 +7,7 @@ class Questao{
     public static function buscar(){
 
         $query = Query::config();
-        $resultado = $query->selectAll('questoes');
+        $resultado = $query->selectAll('que_questoes');
         return $resultado;
 
     }
@@ -24,6 +24,13 @@ class Questao{
             $dados['c'] = $_POST['c'];
             $dados['d'] = $_POST['d'];
             $dados['e'] = $_POST['e'];
+            $dados['f'] = $_POST['f'];
+            $dados['ra'] = $_POST['ra'];
+            $dados['rb'] = $_POST['rb'];
+            $dados['rc'] = $_POST['rc'];
+            $dados['rd'] = $_POST['rd'];
+            $dados['re'] = $_POST['re'];
+            $dados['rf'] = $_POST['rf'];
             $dados['resposta'] = $_POST['resposta'];
             $dados['tags'] = $_POST['tags'];
             $dados['modalidade'] = $_POST['modalidade'];
@@ -38,7 +45,7 @@ class Questao{
             $dados['Area_Atuacao'] = $_POST['Area_Atuacao'];
             $dados['dificuldade'] = $_POST['dificuldade'];
 
-            $query->insert('questoes', $dados);
+            $query->insert('que_questoes', $dados);
 
         }
 
@@ -47,7 +54,7 @@ class Questao{
     public static function filtrar($campos){
 
         $query = Query::config();
-        $resultado = $query->selectWhereFiltro('questoes',$campos);
+        $resultado = $query->selectWhereFiltro('que_questoes',$campos);
         return $resultado;
 
     }

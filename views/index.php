@@ -23,6 +23,8 @@
 
     ?>
 
+    <?php if($questao->modalidade == 'multipla-escolha'): ?>
+
     <div class="row questao-box" id="<?=$questao->id?>">
         <input type="hidden" id="resposta" value="<?=$questao->resposta;?>">
         <div class="col-md-3"></div>
@@ -84,6 +86,91 @@
         </div>
         <div class="col-md-3"></div>
     </div>
+
+    <?php endif; ?>
+
+    <?php if($questao->modalidade == 'verdadeiro ou falso'): ?>
+
+    <div class="row questao-box" id="<?=$questao->id?>">
+        <input type="hidden" id="resposta" value="<?=$questao->resposta;?>">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="atributes">
+                <span>Ano: <span class="dado"><?=$questao->ano;?></span></span>
+                <span>Banca: <span class="dado"><?=$questao->banca;?></span></span>
+                <span>Dificuldade: <span class="dado"><?=$questao->dificuldade;?></span></span>
+                <span>Instituição: <span class="dado"><?=$questao->instituicao;?></span></span>
+            </div>
+            <div class="questao">
+                <p>Questão: <?=$questao->questao;?></p>
+            </div>
+            <div class="responder">
+                <div class="alternativas">
+                    <ul>
+                        <li>
+                            <div><?=$questao->a;?><br></div>
+                            <h6>
+                                <input type="radio" name="respostaA" value="v">Verdadeiro<br>
+                                <input type="radio" name="respostaA" value="f">Falso
+                            </h6>
+                        </li>
+                        <li>
+                        <div><?=$questao->b;?><br></div>
+                            <h6>
+                                <input type="radio" name="respostaB" value="v">Verdadeiro<br>
+                                <input type="radio" name="respostaB" value="f">Falso
+                            </h6>
+                        </li>
+                        <li>
+                        <div><?=$questao->c;?><br></div>
+                            <h6>
+                                <input type="radio" name="respostaC" value="v">Verdadeiro<br>
+                                <input type="radio" name="respostaC" value="f">Falso
+                            </h6>
+                        </li>
+                        <li>
+                        <div><?=$questao->d;?><br></div>
+                            <h6>
+                                <input type="radio" name="respostaD" value="v">Verdadeiro<br>
+                                <input type="radio" name="respostaD" value="f">Falso
+                            </h6>
+                        </li>
+                        <li>
+                        <div><?=$questao->e;?><br></div>
+                            <h6>
+                                <input type="radio" name="respostaE" value="v">Verdadeiro<br>
+                                <input type="radio" name="respostaE" value="f">Falso
+                            </h6>
+                        </li>
+                        <li>
+                        <div><?=$questao->f;?><br></div>
+                            <h6>
+                                <input type="radio" name="respostaF" value="v">Verdadeiro<br>
+                                <input type="radio" name="respostaF" value="f">Falso
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <?php
+                        if(isset($_SESSION['logado']) == 1){?>
+                            <button id="<?=$questao->id?>" value="Responder" class="botaoResponder" onclick="corrigir(this);">Responder</button>
+                        <?php
+                        }else{?>
+                            <button id="<?=$questao->id?>" value="Responder" class="botaoResponder" onclick="logar();">Responder</button>
+                        <?php } ?>
+                    </div>
+                    <div class="col-md-2">
+                        <p id="textoResposta" class="textoResposta"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <?php endif; ?>
 
     <?php }
     } ?>

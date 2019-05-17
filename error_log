@@ -1,0 +1,61 @@
+[16-Apr-2019 21:04:09 America/Chicago] PHP Fatal error:  Uncaught Exception: Rota inválida! in /home/concursar/public_html/questoes/back-end/Router.php:21
+Stack trace:
+#0 /home/concursar/public_html/questoes/index.php(11): Router->direct('questoes')
+#1 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/Router.php on line 21
+[16-Apr-2019 21:20:35 America/Chicago] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/concursar/public_html/questoes/views/partials/head.html:1) in /home/concursar/public_html/questoes/views/partials/filtro.php on line 7
+[16-Apr-2019 21:20:35 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/concursar/public_html/questoes/views/partials/head.html:1) in /home/concursar/public_html/questoes/views/partials/filtro.php on line 7
+[16-Apr-2019 21:21:16 America/Chicago] PHP Fatal error:  Uncaught Exception: Rota inválida! in /home/concursar/public_html/questoes/back-end/Router.php:21
+Stack trace:
+#0 /home/concursar/public_html/questoes/index.php(11): Router->direct('questoes/paine')
+#1 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/Router.php on line 21
+[16-Apr-2019 21:25:40 America/Chicago] PHP Warning:  require(views/QuestoesFiltradas.php): failed to open stream: No such file or directory in /home/concursar/public_html/questoes/back-end/controllers/QuestoesFiltradasController.php on line 15
+[16-Apr-2019 21:25:40 America/Chicago] PHP Warning:  require(views/QuestoesFiltradas.php): failed to open stream: No such file or directory in /home/concursar/public_html/questoes/back-end/controllers/QuestoesFiltradasController.php on line 15
+[16-Apr-2019 21:25:40 America/Chicago] PHP Fatal error:  require(): Failed opening required 'views/QuestoesFiltradas.php' (include_path='.:/opt/php71/lib/php') in /home/concursar/public_html/questoes/back-end/controllers/QuestoesFiltradasController.php on line 15
+[16-Apr-2019 21:32:58 America/Chicago] PHP Fatal error:  Uncaught Exception: Rota inválida! in /home/concursar/public_html/questoes/back-end/Router.php:21
+Stack trace:
+#0 /home/concursar/public_html/questoes/index.php(11): Router->direct('questoes/l')
+#1 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/Router.php on line 21
+[16-Apr-2019 21:35:54 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/concursar/public_html/questoes/back-end/models/Users.php:20) in /home/concursar/public_html/questoes/back-end/models/Users.php on line 25
+[17-Apr-2019 14:25:54 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/concursar/public_html/questoes/back-end/models/Users.php:20) in /home/concursar/public_html/questoes/back-end/models/Users.php on line 25
+[17-Apr-2019 14:28:37 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/concursar/public_html/questoes/back-end/models/Users.php:20) in /home/concursar/public_html/questoes/back-end/models/Users.php on line 25
+[17-Apr-2019 14:35:06 America/Chicago] PHP Fatal error:  Uncaught Exception: Rota inválida! in /home/concursar/public_html/questoes/back-end/Router.php:21
+Stack trace:
+#0 /home/concursar/public_html/questoes/index.php(11): Router->direct('questoes/usu[')
+#1 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/Router.php on line 21
+[17-Apr-2019 14:36:19 America/Chicago] PHP Fatal error:  Uncaught Exception: Rota inválida! in /home/concursar/public_html/questoes/back-end/Router.php:21
+Stack trace:
+#0 /home/concursar/public_html/questoes/index.php(11): Router->direct('questoes/loginm')
+#1 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/Router.php on line 21
+[17-Apr-2019 14:49:48 America/Chicago] PHP Fatal error:  Uncaught Exception: Rota inválida! in /home/concursar/public_html/questoes/back-end/Router.php:21
+Stack trace:
+#0 /home/concursar/public_html/questoes/index.php(11): Router->direct('questoes/dlete')
+#1 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/Router.php on line 21
+[17-Apr-2019 14:49:52 America/Chicago] PHP Fatal error:  Uncaught Exception: Rota inválida! in /home/concursar/public_html/questoes/back-end/Router.php:21
+Stack trace:
+#0 /home/concursar/public_html/questoes/index.php(11): Router->direct('questoes/delete')
+#1 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/Router.php on line 21
+[17-Apr-2019 14:50:10 America/Chicago] PHP Fatal error:  Uncaught Exception: Rota inválida! in /home/concursar/public_html/questoes/back-end/Router.php:21
+Stack trace:
+#0 /home/concursar/public_html/questoes/index.php(11): Router->direct('questoes/paine')
+#1 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/Router.php on line 21
+[17-Apr-2019 15:07:39 America/Chicago] PHP Fatal error:  Uncaught Exception: Rota inválida! in /home/concursar/public_html/questoes/back-end/Router.php:21
+Stack trace:
+#0 /home/concursar/public_html/questoes/index.php(11): Router->direct('questoes/l')
+#1 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/Router.php on line 21
+[17-Apr-2019 15:30:11 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '''')' at line 1 in /home/concursar/public_html/questoes/back-end/core/database/QueryBuilder.php:128
+Stack trace:
+#0 /home/concursar/public_html/questoes/back-end/core/database/QueryBuilder.php(128): PDOStatement->execute()
+#1 /home/concursar/public_html/questoes/back-end/models/Filtros.php(25): QueryBuilder->insertInto('que_filtros', 'filtro', 'valor', 'Assunto', ''')
+#2 /home/concursar/public_html/questoes/back-end/controllers/cadastrarFiltrosController.php(9): Filtro::cadastrar(Array)
+#3 /home/concursar/public_html/questoes/index.php(11): require('/home/concursar...')
+#4 {main}
+  thrown in /home/concursar/public_html/questoes/back-end/core/database/QueryBuilder.php on line 128

@@ -18,8 +18,8 @@
 									<i class="fa fa-check"></i>
 									<select name="modalidade" class="selectInput100">
 										<option value="">Modalidade</option>
-										<option>Múltipla-Escolha</option>
-										<option>Certo ou Errado</option>
+										<option value="multipla-escolha">Múltipla-Escolha</option>
+										<option value="verdadeiro ou falso">Verdadeiro ou Falso</option>
 									</select>
 								</div>
 								

@@ -15,14 +15,14 @@ class User{
             $dados['email'] = $_POST['email'];
             $dados['password'] = $_POST['senha'];
 
-            $query->insert('users', $dados);
+            $query->insert('que_users', $dados);
             ?>
             <script>
             alert("Cadastrado com sucesso!");
             </script>
             <?php
 
-            header('Location: login');
+            @header('Location: login');
             
         }
 
@@ -31,7 +31,7 @@ class User{
     public static function buscar(){
 
         $query = Query::config();
-        $resultado = $query->selectAll('users');
+        $resultado = $query->selectAll('que_users');
         return $resultado;
 
     }
@@ -45,7 +45,7 @@ class User{
             $dados['user'] = $_POST['usuario'];
             $dados['password'] = $_POST['senha'];
 
-            $resultado = $query->selectWhere('users',$dados);
+            $resultado = $query->selectWhere('que_users',$dados);
 
             foreach($resultado as $dado){
                 $nome = $dado->nome;
@@ -54,7 +54,7 @@ class User{
             }
 
             if(!empty($resultado)){
-                session_start();
+                @session_start();
                 $_SESSION['logado'] = 1;
                 $_SESSION['user'] = $nome;
                 $_SESSION['email'] = $email;
@@ -76,7 +76,7 @@ class User{
 
     public static function logout(){
 
-        session_start();
+        @session_start();
         $_SESSION['logado'] = 0;
         session_destroy();
         header('Location: login');
@@ -85,7 +85,7 @@ class User{
 
     public static function check($status = null){
 
-        session_start();
+        @session_start();
 
         if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== 1){
 

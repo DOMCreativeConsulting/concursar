@@ -21,7 +21,7 @@ class Item{
         if(isset($_POST['user'])){
 
             $usuario = $_POST['user'];
-            $query->delete('users', 'id', $usuario);
+            $query->delete('que_users', 'id', $usuario);
             header("Location: usuarios");
 
         }
@@ -29,7 +29,7 @@ class Item{
         if(isset($_POST['questao'])){
 
             $questao = $_POST['questao'];
-            $query->delete('questoes', 'id', $questao);
+            $query->delete('que_questoes', 'id', $questao);
             header("Location: questoes");
 
         }
@@ -37,7 +37,7 @@ class Item{
         if(isset($_POST['filtro'])){
 
             $filtro = $_POST['filtro'];
-            $query->delete('filtros', 'id', $filtro);
+            $query->delete('que_filtros', 'id', $filtro);
             header("Location: filtros");
 
         }
@@ -52,7 +52,7 @@ class Item{
 
             $userId = $_POST['user'];
             $userValue = $_POST['userValue'];
-            $query->update('users', 'nome', $userValue, 'id', $userId);
+            $query->update('que_users', 'nome', $userValue, 'id', $userId);
             header("Location: usuarios");
 
         }
@@ -61,7 +61,7 @@ class Item{
 
             $userId = $_POST['user'];
             $hierarquia = $_POST['hierarquia'];
-            $query->update('users', 'hierarquia', $hierarquia, 'id', $userId);
+            $query->update('que_users', 'hierarquia', $hierarquia, 'id', $userId);
             header("Location: usuarios");
 
         }
@@ -70,7 +70,7 @@ class Item{
 
             $questaoId = $_POST['questao'];
             $questaoValue = $_POST['questaoValue'];
-            $query->update('questoes', 'questao', $questaoValue, 'id', $questaoId);
+            $query->update('que_questoes', 'questao', $questaoValue, 'id', $questaoId);
             header("Location: questoes");
 
         }
@@ -79,7 +79,7 @@ class Item{
 
             $filtroId = $_POST['filtro'];
             $filtroValue = $_POST['filtroValue'];
-            $query->update('filtros', 'valor', $filtroValue, 'id', $filtroId);
+            $query->update('que_filtros', 'valor', $filtroValue, 'id', $filtroId);
             header("Location: filtros");
 
         }        
