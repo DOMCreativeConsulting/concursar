@@ -54,7 +54,6 @@ class User{
             }
 
             if(!empty($resultado)){
-                @session_start();
                 $_SESSION['logado'] = 1;
                 $_SESSION['user'] = $nome;
                 $_SESSION['email'] = $email;
@@ -76,7 +75,6 @@ class User{
 
     public static function logout(){
 
-        @session_start();
         $_SESSION['logado'] = 0;
         session_destroy();
         header('Location: login');
@@ -84,8 +82,6 @@ class User{
     }
 
     public static function check($status = null){
-
-        @session_start();
 
         if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== 1){
 
