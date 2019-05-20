@@ -16,7 +16,12 @@
                         <li>
                             <div class="row">
                                 <div class="col-lg-7">
-                                    <p style="text-align:justify;font-size:11px;"><?=$questao->questao;?></p> - Resposta: <b><?=$questao->resposta;?></b>
+                                    <?php if($questao->modalidade == 'multipla-escolha'): ?>
+                                        <p style="text-align:justify;font-size:11px;"><?=$questao->questao;?></p> - Resposta: <b><?=$questao->resposta;?></b>
+                                    <?php endif; ?>
+                                    <?php if($questao->modalidade == 'certo ou errado'): ?>
+                                        <p style="text-align:justify;font-size:11px;"><?=$questao->questao;?></p> - Resposta: <b><?=$questao->certoErrado == 'c' ? 'Certo' : 'Errado'; ?></b>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="col-lg-5">
                                     <form method="POST" action="deletar">

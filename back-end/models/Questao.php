@@ -24,14 +24,8 @@ class Questao{
             $dados['c'] = $_POST['c'];
             $dados['d'] = $_POST['d'];
             $dados['e'] = $_POST['e'];
-            $dados['f'] = $_POST['f'];
-            $dados['ra'] = $_POST['ra'];
-            $dados['rb'] = $_POST['rb'];
-            $dados['rc'] = $_POST['rc'];
-            $dados['rd'] = $_POST['rd'];
-            $dados['re'] = $_POST['re'];
-            $dados['rf'] = $_POST['rf'];
             $dados['resposta'] = $_POST['resposta'];
+            $dados['certoErrado'] = $_POST['certoErrado'];
             $dados['tags'] = $_POST['tags'];
             $dados['modalidade'] = $_POST['modalidade'];
             $dados['disciplina'] = $_POST['disciplinas'];

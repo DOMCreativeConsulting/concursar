@@ -19,7 +19,7 @@
 									<select name="modalidade" class="selectInput100">
 										<option value="">Modalidade</option>
 										<option value="multipla-escolha">Múltipla-Escolha</option>
-										<option value="verdadeiro ou falso">Verdadeiro ou Falso</option>
+										<option value="certo ou errado">Certo ou Errado</option>
 									</select>
 								</div>
 								
