@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
-    $('.inputQuestao').hide();
-    $('.botaoQuestao').hide();
+    $('.hide').hide();
 
 });
 
-function rename(){
+function rename(objeto){
 
-    $('.botaoQuestao').toggle(300);
-    $('.inputQuestao').toggle(300);
+    var id = objeto.id;
+
+    $(`#editar-${id}`).toggle(300);
 
 }

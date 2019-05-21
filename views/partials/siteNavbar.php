@@ -12,7 +12,7 @@
                 <li class="item mTop2">
                     <div class="elementor-social-icons-wrapper">
                     <a href="https://www.facebook.com/Concursar-Coaching-para-Concursos-267061960846310/"><img class="alignnone wp-image-4960" src="http://concursarcoaching.com.br/site/wp-content/uploads/2019/05/social-facebook-circular-button.png" alt="" width="35" height="35"></a>
-                    <a href="https://www.instagram.com/concursar.coaching/"><img class="alignnone wp-image-4961" src="http://concursarcoaching.com.br/site/wp-content/uploads/2019/05/social-linkedin-circular-button.png" alt="" width="35" height="35"></a>
+                    <a href="https://www.instagram.com/concursar.coaching/"><img class="alignnone wp-image-4961" src="public/assets/img/instagram.png" alt="" width="35" height="35"></a>
                     </div>
                 </li>
             </ul>

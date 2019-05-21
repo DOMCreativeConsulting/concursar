@@ -7,8 +7,7 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <ul class="usersBox">
                         <?php
                         foreach($questoes as $questao):
@@ -29,23 +28,73 @@
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
-                                        <button type="submit" name="questao" id="<?=$questao->id;?>" onclick="rename(this);" value="<?=$questao->id;?>" class="botao-editar" href="#">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                    <form method="POST" action="rename">
-                                        <div class="row">
-                                            <div class="col-md-8">
-                                                <textarea type="text" class="inputQuestao <?=$questao->id;?>" id="<?=$questao->id;?>" value="<?=$questao->questao;?>" name="questaoValue" placeholder="novo valor..." required></textarea>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <button style="float:right;" type="submit" id="<?=$questao->id;?>" name="questao" value="<?=$questao->id;?>" class="botaoQuestao <?=$questao->id;?>" href="#">
-                                                    Salvar
-                                                </button>
-                                            </div>                                                                                                                                   
-                                        </div>
-                                    </form>
+                                    <button type="submit" name="questao" id="<?=$questao->id;?>" onclick="rename(this);" value="<?=$questao->id;?>" class="botao-editar" href="#">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
                                 </div>
                             </div>
+                        </li>
+                        <li style="display:none"></li>
+                        <li class="hide" id="editar-<?=$questao->id;?>">
+                            <form method="POST" action="rename">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="questao">Questão: </label>
+                                        <textarea type="text" class="form-control" name="questao" placeholder="Questão..."><?=$questao->questao;?></textarea>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="tags">Tags: </label>
+                                        <textarea type="text" class="form-control" name="tags" placeholder="Tags..."><?=$questao->tags;?></textarea>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <?php if($questao->modalidade == 'multipla-escolha'){ ?>
+                                        <label for="resposta">Resposta: </label>
+                                        <select name="resposta" class="form-control">
+                                            <option value="a">A</option>
+                                            <option value="b">B</option>
+                                            <option value="c">C</option>
+                                            <option value="d">D</option>
+                                            <option value="e">E</option>
+                                        </select>
+                                        <?php }else{ ?>
+                                        <label for="certoErrado">Resposta: </label>
+                                        <select name="certoErrado" class="form-control">
+                                            <option value="c">Certo</option>
+                                            <option value="e">Errado</option>
+                                        </select>
+                                        <?php } ?>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="asssunto">Assunto: </label>
+                                        <input type="text" class="form-control" name="assunto" value="<?=$questao->assunto;?>">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="banca">Banca: </label>
+                                        <input type="text" class="form-control" name="banca" value="<?=$questao->banca;?>">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="instituicao">Instituição: </label>
+                                        <input type="text" class="form-control" name="instituicao" value="<?=$questao->instituicao;?>">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="disciplina">Disciplina: </label>
+                                        <input type="text" class="form-control" name="disciplina" value="<?=$questao->disciplina;?>">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="ano">Ano: </label>
+                                        <input type="text" class="form-control" name="ano" value="<?=$questao->ano;?>">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="cargo">Cargo: </label>
+                                        <input type="text" class="form-control" name="cargo" value="<?=$questao->cargo;?>">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button type="submit" name="questao" value="<?=$questao->id;?>" class="botaoQuestao" href="#">
+                                            Salvar
+                                        </button>
+                                    </div>                                                                                                                                   
+                                </div>
+                            </form>
                         </li>
                         <?php
                         endforeach; 
