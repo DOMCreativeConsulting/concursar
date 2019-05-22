@@ -6,13 +6,33 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef
 {
+    public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+    );
+
     public static $classMap = array (
+        'App\\Model\\Email' => __DIR__ . '/../..' . '/back-end/models/Email.php',
         'ComposerAutoloaderInit875c3be83ff9da9f3b414a0fa64db0ef' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Conexao' => __DIR__ . '/../..' . '/back-end/core/database/Conexao.php',
         'Filtro' => __DIR__ . '/../..' . '/back-end/models/Filtros.php',
         'Item' => __DIR__ . '/../..' . '/back-end/models/Model.php',
+        'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
+        'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
+        'PHPMailer\\PHPMailer\\PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/PHPMailer.php',
+        'PHPMailer\\PHPMailer\\POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/POP3.php',
+        'PHPMailer\\PHPMailer\\SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/SMTP.php',
         'Query' => __DIR__ . '/../..' . '/back-end/core/QueryConfig.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/back-end/core/database/QueryBuilder.php',
         'Questao' => __DIR__ . '/../..' . '/back-end/models/Questao.php',
@@ -24,6 +44,8 @@ class ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef::$classMap;
 
         }, null, ClassLoader::class);

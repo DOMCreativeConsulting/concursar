@@ -20,6 +20,7 @@ function alterar(objeto){
     }
 
     $('#alterar-questao').html($(`#questao-${id}`).val());
+    $('#id').val($(`#${id}`).val());
     $('#alterar-tags').html($(`#tags-${id}`).val());
     $('#alterar-a').val($(`#a-${id}`).val());
     $('#alterar-b').val($(`#b-${id}`).val());

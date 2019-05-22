@@ -7,6 +7,10 @@
                 <span>Banca: <span class="dado"><?=$questao->banca;?></span></span>
                 <span>Dificuldade: <span class="dado"><?=$questao->dificuldade;?></span></span>
                 <span>Instituição: <span class="dado"><?=$questao->instituicao;?></span></span>
+                <form id="reportarErro-<?=$questao->id;?>" action="reportar-erro" method="POST">
+                    <input type="hidden" value="<?=$questao->id;?>" name="id"> 
+                    <span><a href="javascript:{}" onclick="document.getElementById('reportarErro-<?=$questao->id;?>').submit();" style="color:#212529;" href="reportar-erro"><b style="color:red;" ><i class="fa fa-flag"></i></b> Reportar Erro</a></span>
+                </form>
             </div>
             <div class="questao">
                 <p>Questão: <?=$questao->questao;?></p>

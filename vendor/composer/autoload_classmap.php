@@ -6,12 +6,18 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Model\\Email' => $baseDir . '/back-end/models/Email.php',
     'ComposerAutoloaderInit875c3be83ff9da9f3b414a0fa64db0ef' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef' => $vendorDir . '/composer/autoload_static.php',
     'Conexao' => $baseDir . '/back-end/core/database/Conexao.php',
     'Filtro' => $baseDir . '/back-end/models/Filtros.php',
     'Item' => $baseDir . '/back-end/models/Model.php',
+    'PHPMailer\\PHPMailer\\Exception' => $vendorDir . '/phpmailer/phpmailer/src/Exception.php',
+    'PHPMailer\\PHPMailer\\OAuth' => $vendorDir . '/phpmailer/phpmailer/src/OAuth.php',
+    'PHPMailer\\PHPMailer\\PHPMailer' => $vendorDir . '/phpmailer/phpmailer/src/PHPMailer.php',
+    'PHPMailer\\PHPMailer\\POP3' => $vendorDir . '/phpmailer/phpmailer/src/POP3.php',
+    'PHPMailer\\PHPMailer\\SMTP' => $vendorDir . '/phpmailer/phpmailer/src/SMTP.php',
     'Query' => $baseDir . '/back-end/core/QueryConfig.php',
     'QueryBuilder' => $baseDir . '/back-end/core/database/QueryBuilder.php',
     'Questao' => $baseDir . '/back-end/models/Questao.php',

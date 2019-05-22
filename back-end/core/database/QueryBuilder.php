@@ -34,6 +34,48 @@ class QueryBuilder{
 
     }
 
+    public function atualizar($tabela, $dados, $where)
+    {
+        $dados = (array)$dados;
+        $campos = '';
+        foreach ($dados as $key => $valor) {
+            $campos .= "\n $key=:$key,";
+        }
+        $campos = rtrim($campos, ",");
+        $sql = sprintf(
+            "UPDATE %s \n SET %s \n WHERE id = %s",
+            $tabela,
+            $campos,
+            implode(" = ", $where)
+        );
+        try {
+            $statement = $this->pdo->prepare($sql)->execute($dados);
+            return $where;
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+
+        }
+    }
+
+    public function inserir($table, $parameters)
+    {
+        $sql = sprintf(
+            'insert into %s (%s) values (%s)',
+            $table,
+            implode(', ', array_keys($parameters)),
+            ':' . implode(', :', array_keys($parameters))
+        );
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute($parameters);
+        } catch (\Exception $e) {
+            //echo 'erro ao cadastrar';
+            die($e->getMessage());
+        }
+    }
+
     public function delete($tabela, $campo, $valor){
 
         $sql = "DELETE FROM `{$tabela}` WHERE `{$campo}` = '$valor'";
