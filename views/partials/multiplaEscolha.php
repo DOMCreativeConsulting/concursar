@@ -88,13 +88,14 @@
                             <?php //endforeach; ?>-->
                         </div>
                         <div class="col-md-12">
-                            <form id="comentar" method="POST">
+                            <form class="form-comentar-<?=$questao->id;?>" id="comentar" method="POST" onsubmit="return false">
                                 <div class="row">
                                     <div class="col-md-10">
-                                        <input type="text" id="input-comentar" class="form-control" placeholder="Escreva seu comentário...">
+                                        <input type="text" id="input-comentar-<?=$questao->id;?>" class="form-control" placeholder="Escreva seu comentário...">
+                                        <input type="hidden" id="input-autor-<?=$questao->id;?>" value="<?=$_SESSION['user'];?>">
                                     </div>
                                     <div class="col-md-2">
-                                        <button type="submit" class="btn btn-primary enviar-comentario">Comentar</button>
+                                        <button id="<?=$questao->id;?>" type="submit" onclick="comentar(this);" class="btn btn-primary enviar-comentario">Comentar</button>
                                     </div>
                                 </div>
                             </form>

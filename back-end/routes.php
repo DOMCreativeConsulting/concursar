@@ -17,7 +17,7 @@ $router->define([
     'concursar/atualizar' => 'back-end/controllers/atualizarController.php',
     'concursar/reportar-erro' => 'back-end/controllers/reportarErroController.php',
     'concursar/reportar' => 'back-end/controllers/reportarController.php',
-    'concursar/teste' => 'back-end/controllers/teste.php',
+    'concursar/comentar' => 'back-end/controllers/comentarController.php',
     'concursar/rename' => 'back-end/controllers/renameController.php'
 
 ]);

@@ -28,6 +28,17 @@ class User{
 
     }
 
+    public static function comentar()
+    {
+        $query = Query::config();
+        $dados['autor'] = $_POST['autor'];
+        $dados['comentario'] = $_POST['comentario'];
+        $dados['questaoId'] = $_POST['questaoId'];
+        $dados['data'] = date("Y-m-d H:i:s");
+
+        $query->insert('que_comentarios', $dados);
+    }
+
     public static function buscar(){
 
         $query = Query::config();

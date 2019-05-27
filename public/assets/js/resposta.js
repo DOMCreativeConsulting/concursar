@@ -95,24 +95,39 @@ $(document).ready(function(){
 
 });
 
-$('#comentar').submit(function(){
+$(".form-comentar").submit(function(e) {
+
+    e.preventDefault();
+
+});
+
+function comentar(objeto){
+
+    var id = objeto.id;
+
+    $(`#form-comentar-${id}`).submit();
+
+    comentario = $(`#input-comentar-${id}`).val();
+    autor = $(`#input-autor-${id}`).val();
 
     $.ajax({
-        url : "teste",
+        url : "comentar",
         type : 'post',
         data : {
-            nome : "Maria Fernanda",
-            salario :'3500'
+            comentario : comentario,
+            questaoId : id,
+            autor : autor
         },
         beforeSend : function(){
-            $("#resultado").html("ENVIANDO...");
+            $("#resultado").html("Enviando...");
         }
     })
     .done(function(msg){
+        $(`#input-comentar-${id}`).val([]);
         $("#resultado").html(msg);
     })
     .fail(function(jqXHR, textStatus, msg){
         alert(msg);
     });
 
-});
+}
