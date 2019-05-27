@@ -81,3 +81,38 @@ function riscar(objeto){
     $(`#${id}`).css('text-decoration','line-through');
     $(`#${id}`).prop('disabled', true);
 }
+
+$(document).ready(function(){
+
+    $('.comentarios').hide();
+
+    $('.botao-comentar').click(function(){
+
+        $(`#${this.id}-comentarios`).fadeToggle(150);
+        $('#input-comentar').focus();
+
+    });
+
+});
+
+$('#comentar').submit(function(){
+
+    $.ajax({
+        url : "teste",
+        type : 'post',
+        data : {
+            nome : "Maria Fernanda",
+            salario :'3500'
+        },
+        beforeSend : function(){
+            $("#resultado").html("ENVIANDO...");
+        }
+    })
+    .done(function(msg){
+        $("#resultado").html(msg);
+    })
+    .fail(function(jqXHR, textStatus, msg){
+        alert(msg);
+    });
+
+});

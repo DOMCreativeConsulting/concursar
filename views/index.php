@@ -1,6 +1,7 @@
 <?php include 'views/partials/head.html'; ?>
 <?php include 'views/partials/siteNavbar.php'; ?>
 <body>
+    
     <?php 
     
     require 'views/partials/filtro.php';
@@ -28,7 +29,6 @@
     }
 
     ?>
-
 
     <script src="public/assets/js/resposta.js"></script>
     <script src="public/assets/js/mobile.js"></script>

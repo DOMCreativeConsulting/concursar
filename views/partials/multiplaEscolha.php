@@ -7,10 +7,6 @@
                 <span>Banca: <span class="dado"><?=$questao->banca;?></span></span>
                 <span>Dificuldade: <span class="dado"><?=$questao->dificuldade;?></span></span>
                 <span>Instituição: <span class="dado"><?=$questao->instituicao;?></span></span>
-                <form id="reportarErro-<?=$questao->id;?>" action="reportar-erro" method="POST">
-                    <input type="hidden" value="<?=$questao->id;?>" name="id"> 
-                    <span><a href="javascript:{}" onclick="document.getElementById('reportarErro-<?=$questao->id;?>').submit();" style="color:#212529;" href="reportar-erro"><b style="color:red;" ><i class="fa fa-flag"></i></b> Reportar Erro</a></span>
-                </form>
             </div>
             <div class="questao">
                 <p>Questão: <?=$questao->questao;?></p>
@@ -63,6 +59,47 @@
                     </div>
                     <div class="col-md-2">
                         <p id="textoResposta" class="textoResposta"></p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-4 offset-md-4">
+                                <button type="button" id="<?=$questao->id;?>" class="gold botao-comentar"><i class="fa fa-comment"></i> Comentários</button>
+                            </div>
+                            <div class="col-md-4">
+                                <form id="reportarErro-<?=$questao->id;?>" action="reportar-erro" method="POST">
+                                    <input type="hidden" value="<?=$questao->id;?>" name="id"> 
+                                    <span><button class="gold" type="submit"><b style="color:red;"><i class="fa fa-flag"></i></b> Reportar Erro</button></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="<?=$questao->id;?>-comentarios" class="row comentarios">
+                <div class="col-md-12 commentary-section">
+                    <div class="row">
+                        <div class="col-md-12 outros-comentarios">
+                            <!--<?php //foreach($comentarios as $comentario): ?>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="public/assets/img/user.png" width="100px">
+                                    </div>
+                                </div>
+                            <?php //endforeach; ?>-->
+                        </div>
+                        <div class="col-md-12">
+                            <form id="comentar" method="POST">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <input type="text" id="input-comentar" class="form-control" placeholder="Escreva seu comentário...">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" class="btn btn-primary enviar-comentario">Comentar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="resultado"></div>
                     </div>
                 </div>
             </div>

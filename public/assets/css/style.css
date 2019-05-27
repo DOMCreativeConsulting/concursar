@@ -460,3 +460,16 @@ html, body {
   -moz-box-shadow: 0px 0px 10px 5px rgba(179,179,179,1);
   box-shadow: 0px 0px 10px 5px rgba(179,179,179,1);
 }
+
+.gold{
+  background-color:#d6b46a;
+  color:white;
+  border:none;
+  padding:10px;
+}
+
+.commentary-section{
+  margin:1%;
+  border:1px solid #e1e1e1;
+  padding:1%;
+}
