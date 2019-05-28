@@ -22,6 +22,7 @@ class ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef
 
     public static $classMap = array (
         'App\\Model\\Email' => __DIR__ . '/../..' . '/back-end/models/Email.php',
+        'Comentarios' => __DIR__ . '/../..' . '/back-end/models/Comentarios.php',
         'ComposerAutoloaderInit875c3be83ff9da9f3b414a0fa64db0ef' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef' => __DIR__ . '/..' . '/composer/autoload_static.php',

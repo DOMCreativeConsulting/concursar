@@ -54,7 +54,7 @@
                             <button id="<?=$questao->id?>" value="Responder" class="botaoResponder" onclick="corrigir(this);">Responder</button>
                         <?php
                         }else{?>
-                            <button id="<?=$questao->id?>" value="Responder" class="botaoResponder" onclick="logar();">Responder</button>
+                            <button id="<?=$questao->id?>" value="Responder" class="botaoResponder" onclick="logar('responder');">Responder</button>
                         <?php } ?>
                     </div>
                     <div class="col-md-2">
@@ -63,12 +63,17 @@
                     <div class="col-md-8">
                         <div class="row">
                             <div class="col-md-4 offset-md-4">
-                                <button type="button" id="<?=$questao->id;?>" class="gold botao-comentar"><i class="fa fa-comment"></i> Comentários</button>
+                                <?php
+                                    if(isset($_SESSION['logado']) == 1){?>
+                                <button type="button" id="<?=$questao->id;?>" class="botao-comentar botaoCinza"><i class="fa fa-comment"></i> Comentários</button>
+                                <?php }else{ ?>
+                                <button type="button" onclick="logar('comentar');" class="botao-comentar botaoCinza"><i class="fa fa-comment"></i> Comentários</button>
+                                <?php } ?>
                             </div>
                             <div class="col-md-4">
                                 <form id="reportarErro-<?=$questao->id;?>" action="reportar-erro" method="POST">
                                     <input type="hidden" value="<?=$questao->id;?>" name="id"> 
-                                    <span><button class="gold" type="submit"><b style="color:red;"><i class="fa fa-flag"></i></b> Reportar Erro</button></span>
+                                    <span><button class="botaoCinza" type="submit"><i class="fa fa-flag"></i> Reportar Erro</button></span>
                                 </form>
                             </div>
                         </div>
@@ -78,14 +83,19 @@
             <div id="<?=$questao->id;?>-comentarios" class="row comentarios">
                 <div class="col-md-12 commentary-section">
                     <div class="row">
-                        <div class="col-md-12 outros-comentarios">
-                            <!--<?php //foreach($comentarios as $comentario): ?>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img src="public/assets/img/user.png" width="100px">
+                        <div id="todos-comentarios-<?=$questao->id;?>" class="col-md-12 outros-comentarios">
+                            <?php foreach($comentarios as $comentario): ?>
+                            <?php if($comentario->questaoId == $questao->id): ?>
+                                <div class="row comentario">
+                                    <div class="col-md-1">
+                                        <img src="public/assets/img/user.png" width="35px">
+                                    </div>
+                                    <div class="col-md-11">
+                                        <p><b><?=$comentario->autor;?></b><br><?=$comentario->comentario;?></p>
                                     </div>
                                 </div>
-                            <?php //endforeach; ?>-->
+                            <?php endif; ?>
+                            <?php endforeach; ?>
                         </div>
                         <div class="col-md-12">
                             <form class="form-comentar-<?=$questao->id;?>" id="comentar" method="POST" onsubmit="return false">
@@ -95,7 +105,7 @@
                                         <input type="hidden" id="input-autor-<?=$questao->id;?>" value="<?=$_SESSION['user'];?>">
                                     </div>
                                     <div class="col-md-2">
-                                        <button id="<?=$questao->id;?>" type="submit" onclick="comentar(this);" class="btn btn-primary enviar-comentario">Comentar</button>
+                                        <button id="<?=$questao->id;?>" type="submit" onclick="comentar(this);" class="btn enviar-comentario">Comentar</button>
                                     </div>
                                 </div>
                             </form>

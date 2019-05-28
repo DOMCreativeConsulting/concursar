@@ -65,9 +65,9 @@ function corrigirCertoErrado(objeto){
 
 }
 
-function logar(){
+function logar(acao){
 
-    alert("Você precisar estar logado para responder!");
+    alert("Você precisar estar logado para "+acao+"!");
     window.location.replace("login");
 
 }
@@ -125,6 +125,7 @@ function comentar(objeto){
     .done(function(msg){
         $(`#input-comentar-${id}`).val([]);
         $("#resultado").html(msg);
+        $(`#todos-comentarios-${id}`).append("<div class='row comentario'> <div class='col-md-1'> <img src='public/assets/img/user.png' width='35px'> </div> <div class='col-md-11'> <p><b>"+autor+"</b><br>"+comentario+"</p> </div></div>");
     })
     .fail(function(jqXHR, textStatus, msg){
         alert(msg);

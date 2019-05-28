@@ -461,15 +461,35 @@ html, body {
   box-shadow: 0px 0px 10px 5px rgba(179,179,179,1);
 }
 
-.gold{
-  background-color:#d6b46a;
+.botaoCinza{
+  background-color:#d1d1d1;
   color:white;
   border:none;
-  padding:10px;
+  padding:10px 7px 10px 7px;
 }
 
 .commentary-section{
   margin:1%;
   border:1px solid #e1e1e1;
   padding:1%;
+}
+
+.comentario{
+  padding-top:1%;
+  background-color:#f1f3f5;
+  border-radius:5px;
+  margin:2%;
+}
+
+.enviar-comentario{
+  background-color: #d6b46a;
+  color:white;
+  border-radius:0px;
+}
+
+.enviar-comentario:hover{
+  transition:0.3s;
+  color:white;
+  background-color:#ad8b41;
+  border-radius:0px;
 }

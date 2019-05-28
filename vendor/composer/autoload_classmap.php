@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Model\\Email' => $baseDir . '/back-end/models/Email.php',
+    'Comentarios' => $baseDir . '/back-end/models/Comentarios.php',
     'ComposerAutoloaderInit875c3be83ff9da9f3b414a0fa64db0ef' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInit875c3be83ff9da9f3b414a0fa64db0ef' => $vendorDir . '/composer/autoload_static.php',
