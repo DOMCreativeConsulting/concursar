@@ -5,41 +5,41 @@
             <div class="atributes">
                 <span>Ano: <span class="dado"><?=$questao->ano;?></span></span>
                 <span>Banca: <span class="dado"><?=$questao->banca;?></span></span>
-                <span>Dificuldade: <span class="dado"><?=$questao->dificuldade;?></span></span>
+                <!-- <span>Dificuldade: <span class="dado"><//?=$questao->dificuldade;?></span></span> -->
                 <span>Instituição: <span class="dado"><?=$questao->instituicao;?></span></span>
             </div>
             <div class="questao">
-                <p>Questão: <?=$questao->questao;?></p>
+                <p style="text-align:justify !important;">Questão: <?=$questao->questao;?></p>
             </div>
             <div class="responder">
                 <div class="alternativas">
                     <ul>
                         <li class='alternativa'>
-                            <label class="container" id="<?=$questao->id;?>-a">A - <?=$questao->a;?>
+                            <label style="text-align:justify !important;" class="container" id="<?=$questao->id;?>-a">A - <?=$questao->a;?>
                                 <a onclick="riscar(this);" id="<?=$questao->id;?>-a" href="#"><i class="fa fa-scissors"></i></a>
                                 <input type="radio" name="resposta" value="a">
                                 <span class="checkmark"></span>
                             </label>
                         </li>
-                        <li class='alternativa'><label class="container" id="<?=$questao->id;?>-b">B - <?=$questao->b;?>
+                        <li class='alternativa'><label style="text-align:justify !important;" class="container" id="<?=$questao->id;?>-b">B - <?=$questao->b;?>
                         <a onclick="riscar(this);" id="<?=$questao->id;?>-b" href="#"><i class="fa fa-scissors"></i></a>
                                 <input type="radio" name="resposta" value="b">
                                 <span class="checkmark"></span>
                             </label>
                         </li>
-                        <li class='alternativa'><label class="container" id="<?=$questao->id;?>-c">C - <?=$questao->c;?>
+                        <li class='alternativa'><label style="text-align:justify !important;" class="container" id="<?=$questao->id;?>-c">C - <?=$questao->c;?>
                         <a onclick="riscar(this);" id="<?=$questao->id;?>-c" href="#"><i class="fa fa-scissors"></i></a>
                                 <input type="radio" name="resposta" value="c">
                                 <span class="checkmark"></span>
                             </label>
                         </li>
-                        <li class='alternativa'><label class="container" id="<?=$questao->id;?>-d">D - <?=$questao->d;?>
+                        <li class='alternativa'><label style="text-align:justify !important;" class="container" id="<?=$questao->id;?>-d">D - <?=$questao->d;?>
                         <a onclick="riscar(this);" id="<?=$questao->id;?>-d" href="#"><i class="fa fa-scissors"></i></a>
                                 <input type="radio" name="resposta" value="d">
                                 <span class="checkmark"></span>
                             </label>
                         </li>
-                        <li class='alternativa'><label class="container" id="<?=$questao->id;?>-e">E - <?=$questao->e;?>
+                        <li class='alternativa'><label style="text-align:justify !important;" class="container" id="<?=$questao->id;?>-e">E - <?=$questao->e;?>
                         <a onclick="riscar(this);" id="<?=$questao->id;?>-e" href="#"><i class="fa fa-scissors"></i></a>
                                 <input type="radio" name="resposta" value="e">
                                 <span class="checkmark"></span>

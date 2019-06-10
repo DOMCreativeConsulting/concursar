@@ -38,8 +38,8 @@ class Questao{
             $dados['cargo'] = $_POST['cargo'];
             $dados['nivel'] = $_POST['nivel'];
             $dados['Area_Formacao'] = $_POST['Area_Formacao'];
-            $dados['Area_Atuacao'] = $_POST['Area_Atuacao'];
-            $dados['dificuldade'] = $_POST['dificuldade'];
+            //$dados['Area_Atuacao'] = $_POST['Area_Atuacao'];
+            //$dados['dificuldade'] = $_POST['dificuldade'];
 
             $query->insert('que_questoes', $dados);
 
@@ -67,9 +67,9 @@ class Questao{
             'ano' => $_POST['ano'],
             'cargo' => $_POST['cargo'],
             'nivel' => $_POST['nivel'],
-            'area_atuacao' => $_POST['area_atuacao'],
+            // 'area_atuacao' => $_POST['area_atuacao'],
             'area_formacao' => $_POST['area_formacao'],
-            'dificuldade' => $_POST['dificuldade']
+            //'dificuldade' => $_POST['dificuldade']
         ],[
             'id' => $_POST['id']
         ]);
@@ -100,7 +100,7 @@ class Questao{
 
         ]);
 
-        Email::enviar('noreply@concursarcoaching.com.br','contato@concursarcoaching.com.br',[
+        Email::enviar('noreply@concursarcoaching.com.br','concursar.coaching@gmail.com',[
             'assunto' => $_POST['titulo'],
             'mensagem' => 'O usuário '.$_POST['nome'].' informou o seguinte erro: '.$_POST['mensagem']
         ]);

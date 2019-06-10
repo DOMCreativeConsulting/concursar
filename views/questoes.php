@@ -51,9 +51,9 @@
                             <input type="hidden" value="<?=$questao->cargo;?>" id="cargo-<?=$questao->id;?>">
                             <input type="hidden" value="<?=$questao->nivel;?>" id="nivel-<?=$questao->id;?>">
                             <input type="hidden" value="<?=$questao->area_formacao;?>" id="area_formacao-<?=$questao->id;?>">
-                            <input type="hidden" value="<?=$questao->area_atuacao;?>" id="area_atuacao-<?=$questao->id;?>">
+                            <!-- <input type="hidden" value="<//?=$questao->area_atuacao;?>" id="area_atuacao-<//?=$questao->id;?>"> -->
                             <input type="hidden" value="<?=$questao->modalidade;?>" id="modalidade-<?=$questao->id;?>">
-                            <input type="hidden" value="<?=$questao->dificuldade;?>" id="dificuldade-<?=$questao->id;?>">
+                            <!-- <input type="hidden" value="<//?=$questao->dificuldade;?>" id="dificuldade-<//?=$questao->id;?>"> -->
                         </li>
                         <?php
                         endforeach; 
@@ -131,18 +131,18 @@
                                     <label for="alterar-nivel"><i class="fa fa-arrow-up"></i> Nível: </label>
                                     <input type="text" class="form-control" id="alterar-nivel" name="nivel">
                                 </div>
-                                <div class="paddingTop2 col-md-4">
+                                <!--<div class="paddingTop2 col-md-4">
                                     <label for="alterar-area_atuacao"><i class="fa fa-briefcase"></i> Área de Atuação: </label>
                                     <input type="text" class="form-control" id="alterar-area_atuacao" name="area_atuacao">
-                                </div>
+                                </div>-->
                                 <div class="paddingTop2 col-md-4">
                                     <label for="alterar-area_formacao"><i class="fa fa-feather"></i> Área de Formação: </label>
                                     <input type="text" class="form-control" id="alterar-area_formacao" name="area_formacao">
                                 </div>
-                                <div class="paddingTop2 col-md-4">
+                                <!--<div class="paddingTop2 col-md-4">
                                     <label for="alterar-dificuldade"><i class="fa fa-arrow-down"></i> Dificuldade: </label>
                                     <input type="text" class="form-control" id="alterar-dificuldade" name="dificuldade">
-                                </div>
+                                </div>-->
                                 <div style="padding-bottom:2%;" class="paddingTop2 col-md-12">
                                     <button style="background-color:#D2AE6D;color:white;" type="submit" class="form-control col-md-4 offset-md-4">Atualizar</button>
                                 </div>

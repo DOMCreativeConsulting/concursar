@@ -5,9 +5,9 @@ $noar = false;
     if($noar == true){
         return[
             'database' => [
-                'name' => 'concursa_site',
-                'username' => 'concursar',
-                'password' => 'QERYuF9JjON8',
+                'name' => 'concursarcoach_site',
+                'username' => 'concursarcoach_site',
+                'password' => 'Tt-QFpx,!4&,',
                 'connection' => 'mysql:host=localhost',
                 'options' => []
             ]

@@ -5,11 +5,11 @@
             <div class="atributes">
                 <span>Ano: <span class="dado"><?=$questao->ano;?></span></span>
                 <span>Banca: <span class="dado"><?=$questao->banca;?></span></span>
-                <span>Dificuldade: <span class="dado"><?=$questao->dificuldade;?></span></span>
+                <!--<span>Dificuldade: <span class="dado"><//?=$questao->dificuldade;?></span></span>-->
                 <span>Instituição: <span class="dado"><?=$questao->instituicao;?></span></span>
             </div>
             <div class="questao">
-                <p>Questão: <?=$questao->questao;?></p>
+                <p style="text-align:justify !important;">Questão: <?=$questao->questao;?></p>
             </div>
             <div class="responder">
                 <div class="alternativas">

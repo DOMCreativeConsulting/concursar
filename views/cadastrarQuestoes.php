@@ -108,7 +108,7 @@
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
                             <div class="row">
-                                <div class="col-lg-4">  
+                                <!--<div class="col-lg-4">  
                                     <label for="Area_Atuacao"><i class="fa fa-briefcase"></i> Área de Atuação</label>
                                     <input class="form-control" name="Area_Atuacao" list="Area_Atuacao" placeholder="Pesquisar...">
                                     <datalist id="Area_Atuacao">
@@ -116,8 +116,8 @@
                                         <option value="<?=$Area_Atuacao->valor?>"><?=$Area_Atuacao->valor?></option>
                                         <?php endforeach; ?>
                                     </datalist>   
-                                </div>
-                                <div class="col-lg-4">
+                                </div>-->
+                                <div class="col-lg-6">
                                     <label for="disciplinas"><i class="fa fa-book"></i> Disciplinas</label>
                                     <input class="form-control" name="disciplinas" list="disciplinas" placeholder="Pesquisar...">
                                     <datalist id="disciplinas">
@@ -126,7 +126,7 @@
                                         <?php endforeach; ?>
                                     </datalist>  
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <label for="assunto"><i class="fa fa-comment"></i> Assunto</label>
                                     <input class="form-control" name="assunto" list="assunto" placeholder="Pesquisar...">
                                     <datalist id="assunto">
@@ -213,7 +213,7 @@
                         <div class="col-lg-2"></div>
                     </div>
 
-                    <div class="row paddingTop4">
+                    <!--<div class="row paddingTop4">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">
                             <div class="row">
@@ -229,7 +229,7 @@
                             </div>              
                         </div>
                         <div class="col-lg-2"></div>
-                    </div>
+                    </div>-->
                     <div class="row paddingTop4">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8">

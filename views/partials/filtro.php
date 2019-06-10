@@ -7,7 +7,7 @@
 						<form method="post" action="questoesFiltradas">
 
 							<div class="row"><span class="contact100-form-title center">Questões de Concurso</span></div>
-							<div class="row">
+							<div class="row offset-md-1">
 
 								<div class="wrap-input100 validate-input bg1 col-lg-2">
 									<i class="fa fa-search"></i>
@@ -52,6 +52,10 @@
 										<?php endforeach; ?>
 									</select>
 								</div>
+
+							</div>
+
+							<div class="row offset-md-1">
 
 								<div class="col-lg-2 boxInput100">
 									<i class="fa fa-home"></i>
@@ -126,7 +130,7 @@
 									</select>
 								</div>
 
-								<div class="col-lg-2 boxInput100">
+								<!--<div class="col-lg-2 boxInput100">
 									<i class="fa fa-briefcase"></i>
 									<select name="area_atuacao" class="selectInput100">
 										<option value="">Área de Atuação</option>
@@ -145,7 +149,7 @@
 										<option>Difícil</option>
 										<option>Muito Difícil</option>
 									</select>
-								</div>
+								</div>-->
 
 							</div>
 							<div class="row">
