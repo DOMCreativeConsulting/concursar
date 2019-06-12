@@ -60,12 +60,14 @@ class User{
 
             foreach($resultado as $dado){
                 $nome = $dado->nome;
+                $id = $dado->id;
                 $email = $dado->email;
                 $hierarquia = $dado->hierarquia;
             }
 
             if(!empty($resultado)){
                 $_SESSION['logado'] = 1;
+                $_SESSION['id'] = $id;
                 $_SESSION['user'] = $nome;
                 $_SESSION['email'] = $email;
                 $_SESSION['hierarquia'] = $hierarquia;
@@ -84,12 +86,31 @@ class User{
 
     }
 
+    public static function senha()
+    {
+        $query = Query::config();
+
+        $dados['id'] = $_SESSION['id'];
+
+        $resultado = $query->selectWhere('que_users',$dados);
+        return $resultado;
+    }
+
     public static function logout(){
 
         $_SESSION['logado'] = 0;
         session_destroy();
         header('Location: login');
 
+    }
+
+    public static function alterarSenha()
+    {
+        $query = Query::config();
+
+        $query->update('que_users', 'password', $_POST['nova-senha'], 'id', $_POST['id']);
+
+        header('Location: painel');
     }
 
     public static function check($status = null){

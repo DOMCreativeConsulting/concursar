@@ -95,7 +95,7 @@
                             </div>
                             <div class="account-dropdown__body">
                                 <div class="account-dropdown__item">
-                                    <a href="#">
+                                    <a href="minha-conta">
                                         <i class="zmdi zmdi-account"></i>Conta</a>
                                 </div>
                                 <div class="account-dropdown__item">
